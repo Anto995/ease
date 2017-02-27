@@ -14,6 +14,8 @@
 		A9593BED1E64872B0019B0D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9593BEB1E64872B0019B0D0 /* LaunchScreen.storyboard */; };
 		A9593BF81E64872B0019B0D0 /* EaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593BF71E64872B0019B0D0 /* EaseTests.swift */; };
 		A9593C031E64872B0019B0D0 /* EaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593C021E64872B0019B0D0 /* EaseUITests.swift */; };
+		A9593C111E6493FC0019B0D0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593C101E6493FC0019B0D0 /* HomeViewController.swift */; };
+		A9593C131E64A4AC0019B0D0 /* ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9593C121E64A4AC0019B0D0 /* ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		A9593BFE1E64872B0019B0D0 /* EaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9593C021E64872B0019B0D0 /* EaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseUITests.swift; sourceTree = "<group>"; };
 		A9593C041E64872B0019B0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9593C101E6493FC0019B0D0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
+		A9593C121E64A4AC0019B0D0 /* ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +101,11 @@
 		A9593BE11E64872B0019B0D0 /* Ease */ = {
 			isa = PBXGroup;
 			children = (
+				A9593C101E6493FC0019B0D0 /* HomeViewController.swift */,
 				A9593BE21E64872B0019B0D0 /* AppDelegate.swift */,
 				A9593BE41E64872B0019B0D0 /* ViewController.swift */,
 				A9593BE61E64872B0019B0D0 /* Main.storyboard */,
+				A9593C121E64A4AC0019B0D0 /* ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg */,
 				A9593BE91E64872B0019B0D0 /* Assets.xcassets */,
 				A9593BEB1E64872B0019B0D0 /* LaunchScreen.storyboard */,
 				A9593BEE1E64872B0019B0D0 /* Info.plist */,
@@ -236,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9593BED1E64872B0019B0D0 /* LaunchScreen.storyboard in Resources */,
+				A9593C131E64A4AC0019B0D0 /* ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg in Resources */,
 				A9593BEA1E64872B0019B0D0 /* Assets.xcassets in Resources */,
 				A9593BE81E64872B0019B0D0 /* Main.storyboard in Resources */,
 			);
@@ -263,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9593BE51E64872B0019B0D0 /* ViewController.swift in Sources */,
+				A9593C111E6493FC0019B0D0 /* HomeViewController.swift in Sources */,
 				A9593BE31E64872B0019B0D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,7 +426,7 @@
 				DEVELOPMENT_TEAM = 3635YFUH74;
 				INFOPLIST_FILE = Ease/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ios.Ease;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.ease.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -431,7 +439,7 @@
 				DEVELOPMENT_TEAM = 3635YFUH74;
 				INFOPLIST_FILE = Ease/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ios.Ease;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.ease.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
