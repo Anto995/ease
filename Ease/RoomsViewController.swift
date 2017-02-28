@@ -92,7 +92,7 @@ class RoomsViewController: UITableViewController {
         
         switch segue.identifier{
             case "segueRoom":
-            
+            print("ciao")
             
         }
         
