@@ -92,7 +92,7 @@ class RoomsViewController: UITableViewController {
         
         switch segue.identifier{
             default:
-            print("ciao")
+            print("ciaoooo")
                     }
         
         // Get the new view controller using segue.destinationViewController.
