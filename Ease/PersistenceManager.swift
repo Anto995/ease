@@ -12,7 +12,7 @@ import UIKit
 
 class PersistenceManager {
     
-    static let name = "Rooms"
+    static let name = "Room"
     
     static func getContext() -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -20,5 +20,24 @@ class PersistenceManager {
     }
     
     
+    static func createEmptyRoom() -> Room {
+        let context = getContext()
+        
+        let room = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Room
     
+        room.name = ""
+        
+        return room
+        
+    }
+    
+    
+    static func saveContext() {
+        let context = getContext()
+        do {
+            try context.save()
+        } catch let error as NSError {
+            print("Error in save \(error)")
+        }
+    }
 }
