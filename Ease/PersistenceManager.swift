@@ -12,7 +12,7 @@ import UIKit
 
 class PersistenceManager {
     
-    static let name = "Room"
+    
     
     static func getContext() -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -20,14 +20,19 @@ class PersistenceManager {
     }
     
     
-    static func createEmptyRoom() -> Room {
+    static func createEmptyRoom() {
         let context = getContext()
         
-        let room = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Room
-    
-        room.name = ""
+        let room = NSEntityDescription.insertNewObject(forEntityName: "Room", into: context) as! Room
+        let device = NSEntityDescription.insertNewObject(forEntityName: "Device", into: context) as! Device
         
-        return room
+        room.name = ""
+        device.id = 0
+        device.name = ""
+        
+        device.is_contained = room
+        
+        saveContext()
         
     }
     

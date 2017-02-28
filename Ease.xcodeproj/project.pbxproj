@@ -21,11 +21,11 @@
 		A9AF26FA1E65B66F00E280A9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF26F91E65B66F00E280A9 /* SettingsViewController.swift */; };
 		A9AF26FD1E65B75600E280A9 /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF26FC1E65B75600E280A9 /* RoomDetailsViewController.swift */; };
 		A9AF27031E65BC5B00E280A9 /* easeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9AF27011E65BC5B00E280A9 /* easeModel.xcdatamodeld */; };
-		A9AF27081E65BE4400E280A9 /* Room+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF27041E65BE4400E280A9 /* Room+CoreDataClass.swift */; };
-		A9AF27091E65BE4400E280A9 /* Room+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF27051E65BE4400E280A9 /* Room+CoreDataProperties.swift */; };
-		A9AF270A1E65BE4400E280A9 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF27061E65BE4400E280A9 /* Device+CoreDataClass.swift */; };
-		A9AF270B1E65BE4400E280A9 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF27071E65BE4400E280A9 /* Device+CoreDataProperties.swift */; };
 		A9AF270F1E65C0DC00E280A9 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF270E1E65C0DC00E280A9 /* PersistenceManager.swift */; };
+		A9AF271C1E65CBFD00E280A9 /* Room+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF27181E65CBFD00E280A9 /* Room+CoreDataClass.swift */; };
+		A9AF271D1E65CBFD00E280A9 /* Room+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF27191E65CBFD00E280A9 /* Room+CoreDataProperties.swift */; };
+		A9AF271E1E65CBFD00E280A9 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF271A1E65CBFD00E280A9 /* Device+CoreDataClass.swift */; };
+		A9AF271F1E65CBFD00E280A9 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF271B1E65CBFD00E280A9 /* Device+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,11 +66,11 @@
 		A9AF26F91E65B66F00E280A9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A9AF26FC1E65B75600E280A9 /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
 		A9AF27021E65BC5B00E280A9 /* easeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = easeModel.xcdatamodel; sourceTree = "<group>"; };
-		A9AF27041E65BE4400E280A9 /* Room+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A9AF27051E65BE4400E280A9 /* Room+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A9AF27061E65BE4400E280A9 /* Device+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A9AF27071E65BE4400E280A9 /* Device+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A9AF270E1E65C0DC00E280A9 /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		A9AF27181E65CBFD00E280A9 /* Room+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A9AF27191E65CBFD00E280A9 /* Room+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A9AF271A1E65CBFD00E280A9 /* Device+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A9AF271B1E65CBFD00E280A9 /* Device+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +101,10 @@
 		A9593BD61E64872A0019B0D0 = {
 			isa = PBXGroup;
 			children = (
-				A9AF27041E65BE4400E280A9 /* Room+CoreDataClass.swift */,
-				A9AF27051E65BE4400E280A9 /* Room+CoreDataProperties.swift */,
-				A9AF27061E65BE4400E280A9 /* Device+CoreDataClass.swift */,
-				A9AF27071E65BE4400E280A9 /* Device+CoreDataProperties.swift */,
+				A9AF27181E65CBFD00E280A9 /* Room+CoreDataClass.swift */,
+				A9AF27191E65CBFD00E280A9 /* Room+CoreDataProperties.swift */,
+				A9AF271A1E65CBFD00E280A9 /* Device+CoreDataClass.swift */,
+				A9AF271B1E65CBFD00E280A9 /* Device+CoreDataProperties.swift */,
 				A9593BE11E64872B0019B0D0 /* Ease */,
 				A9593BF61E64872B0019B0D0 /* EaseTests */,
 				A9593C011E64872B0019B0D0 /* EaseUITests */,
@@ -300,17 +300,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9593BE51E64872B0019B0D0 /* ViewController.swift in Sources */,
-				A9AF270B1E65BE4400E280A9 /* Device+CoreDataProperties.swift in Sources */,
-				A9AF27081E65BE4400E280A9 /* Room+CoreDataClass.swift in Sources */,
+				A9AF271D1E65CBFD00E280A9 /* Room+CoreDataProperties.swift in Sources */,
 				A9593C111E6493FC0019B0D0 /* HomeViewController.swift in Sources */,
 				A9AF26FA1E65B66F00E280A9 /* SettingsViewController.swift in Sources */,
 				A9AF270F1E65C0DC00E280A9 /* PersistenceManager.swift in Sources */,
 				A9AF26F81E65B5F000E280A9 /* HomePageViewController.swift in Sources */,
-				A9AF270A1E65BE4400E280A9 /* Device+CoreDataClass.swift in Sources */,
+				A9AF271F1E65CBFD00E280A9 /* Device+CoreDataProperties.swift in Sources */,
 				A9593BE31E64872B0019B0D0 /* AppDelegate.swift in Sources */,
+				A9AF271C1E65CBFD00E280A9 /* Room+CoreDataClass.swift in Sources */,
 				A9AF27031E65BC5B00E280A9 /* easeModel.xcdatamodeld in Sources */,
+				A9AF271E1E65CBFD00E280A9 /* Device+CoreDataClass.swift in Sources */,
 				A9AF26FD1E65B75600E280A9 /* RoomDetailsViewController.swift in Sources */,
-				A9AF27091E65BE4400E280A9 /* Room+CoreDataProperties.swift in Sources */,
 				A9593C151E64CEF30019B0D0 /* RoomsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
