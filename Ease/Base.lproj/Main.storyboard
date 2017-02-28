@@ -261,7 +261,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Erd-VV-r8W" id="JIE-Xk-NE3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3il-mO-Z9A">
@@ -350,6 +350,25 @@
             </objects>
             <point key="canvasLocation" x="7482" y="979"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="hXa-jF-5KN">
+            <objects>
+                <viewController id="XFr-j9-TcT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q9x-PE-Opj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xgr-LQ-DCb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aIO-K8-rpT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="OXG-NW-FMk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXn-Yx-IZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8382" y="994"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Z7r-yT-ctp">
             <objects>
@@ -365,6 +384,7 @@
                         <segue destination="QGY-3P-RVQ" kind="relationship" relationship="viewControllers" id="1HN-uk-Rb5"/>
                         <segue destination="bF3-H2-jaR" kind="relationship" relationship="viewControllers" id="3om-sr-H5S"/>
                         <segue destination="rac-O8-oo2" kind="relationship" relationship="viewControllers" id="fOp-y8-6b3"/>
+                        <segue destination="XFr-j9-TcT" kind="relationship" relationship="viewControllers" id="1xV-ho-sRN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oe-IN-K14" userLabel="First Responder" sceneMemberID="firstResponder"/>
