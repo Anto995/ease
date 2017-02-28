@@ -12,7 +12,7 @@ class RoomsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -85,12 +85,21 @@ class RoomsViewController: UITableViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+     In a storyboard-based application, you will often want to do a little preparation before navigation
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        switch segue.identifier{
+            case "segueRoom":
+            
+            
+        }
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
     
     
 }

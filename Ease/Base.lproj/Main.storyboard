@@ -261,7 +261,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Erd-VV-r8W" id="JIE-Xk-NE3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3il-mO-Z9A">
@@ -272,6 +272,20 @@
                                                 <outletCollection property="gestureRecognizers" destination="qa7-b0-bsc" appends="YES" id="mY6-gg-me3"/>
                                             </connections>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbR-B7-Aiz">
+                                            <rect key="frame" x="246" y="88" width="91" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7r-y5-PNo">
+                                            <rect key="frame" x="70" y="77" width="124" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 </tableViewCellContentView>
@@ -288,11 +302,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DdY-5X-UOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="qa7-b0-bsc">
                     <connections>
-                        <segue destination="tCk-99-CR7" kind="showDetail" action="showViewController:sender:" id="MsQ-MH-dLG"/>
+                        <segue destination="tCk-99-CR7" kind="showDetail" identifier="segueRoom" action="showViewController:sender:" id="MsQ-MH-dLG"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="6625" y="980"/>
+            <point key="canvasLocation" x="6624.8000000000002" y="979.16041979010504"/>
         </scene>
         <!--RoomDetails View Controller-->
         <scene sceneID="O2R-Tn-PSs">
