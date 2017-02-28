@@ -11,9 +11,6 @@ import UIKit
 class RoomsViewController: UITableViewController {
 
 
-    @IBOutlet weak var roomName: UILabel!
-    
-    @IBOutlet weak var devNumber: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +53,7 @@ class RoomsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "idcell", for: indexPath) as! RoomCell
         
         var arrayRoom = PersistenceManager.fetchData()
-         var room = arrayRoom[indexPath.row]
+        let room = arrayRoom[indexPath.row]
         cell.devNumber.text = "\(room.contains?.count)"
         cell.roomName.text = room.name
         
@@ -113,7 +110,7 @@ class RoomsViewController: UITableViewController {
     
      In a storyboard-based application, you will often want to do a little preparation before navigation
      */
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
         
@@ -127,5 +124,4 @@ class RoomsViewController: UITableViewController {
     }
     
     
-    
-}
+

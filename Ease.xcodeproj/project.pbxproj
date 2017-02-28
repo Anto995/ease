@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		44159ED71E65E27E00818548 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44159ED61E65E27E00818548 /* RoomCell.swift */; };
+		A92D907E1E65EE5200221B5F /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D907D1E65EE5200221B5F /* RoomCell.swift */; };
 		A9593BE31E64872B0019B0D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593BE21E64872B0019B0D0 /* AppDelegate.swift */; };
 		A9593BE51E64872B0019B0D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593BE41E64872B0019B0D0 /* ViewController.swift */; };
 		A9593BE81E64872B0019B0D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9593BE61E64872B0019B0D0 /* Main.storyboard */; };
@@ -52,7 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		44159ED61E65E27E00818548 /* RoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
+		A92D907D1E65EE5200221B5F /* RoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		A9593BDF1E64872B0019B0D0 /* Ease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9593BE21E64872B0019B0D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9593BE41E64872B0019B0D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +151,7 @@
 				A9AF26FC1E65B75600E280A9 /* RoomDetailsViewController.swift */,
 				A9AF27011E65BC5B00E280A9 /* easeModel.xcdatamodeld */,
 				A9AF270E1E65C0DC00E280A9 /* PersistenceManager.swift */,
+				A92D907D1E65EE5200221B5F /* RoomCell.swift */,
 				A9AF27201E65D9CC00E280A9 /* Tutorial1ViewController.swift */,
 				A9AF27221E65D9E700E280A9 /* Tutorial2ViewController.swift */,
 				A9AF27241E65DA0000E280A9 /* Tutorial3ViewController.swift */,
@@ -332,6 +333,7 @@
 				A9AF27031E65BC5B00E280A9 /* easeModel.xcdatamodeld in Sources */,
 				A9AF26FD1E65B75600E280A9 /* RoomDetailsViewController.swift in Sources */,
 				A9AF27251E65DA0000E280A9 /* Tutorial3ViewController.swift in Sources */,
+				A92D907E1E65EE5200221B5F /* RoomCell.swift in Sources */,
 				A9593C151E64CEF30019B0D0 /* RoomsViewController.swift in Sources */,
 				A9AF27321E65EBFF00E280A9 /* Room+CoreDataClass.swift in Sources */,
 			);
