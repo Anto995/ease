@@ -17,6 +17,7 @@ extension Room {
     }
 
     @NSManaged public var name: String?
+    @NSManaged public var image: NSData?
     @NSManaged public var contains: NSSet?
 
 }

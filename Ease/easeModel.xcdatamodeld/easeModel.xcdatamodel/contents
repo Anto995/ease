@@ -6,11 +6,12 @@
         <relationship name="is_contained" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="contains" inverseEntity="Room" syncable="YES"/>
     </entity>
     <entity name="Room" representedClassName="Room" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" minValueString="1" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" minValueString="1" maxValueString="20" syncable="YES"/>
         <relationship name="contains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Device" inverseName="is_contained" inverseEntity="Device" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Room" positionX="-2" positionY="-135" width="128" height="73"/>
+        <element name="Room" positionX="-2" positionY="-135" width="128" height="88"/>
         <element name="Device" positionX="315" positionY="-162" width="128" height="90"/>
     </elements>
 </model>
