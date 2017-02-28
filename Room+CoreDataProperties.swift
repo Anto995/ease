@@ -17,6 +17,23 @@ extension Room {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var contains: Device?
+    @NSManaged public var contains: NSSet?
+
+}
+
+// MARK: Generated accessors for contains
+extension Room {
+
+    @objc(addContainsObject:)
+    @NSManaged public func addToContains(_ value: Device)
+
+    @objc(removeContainsObject:)
+    @NSManaged public func removeFromContains(_ value: Device)
+
+    @objc(addContains:)
+    @NSManaged public func addToContains(_ values: NSSet)
+
+    @objc(removeContains:)
+    @NSManaged public func removeFromContains(_ values: NSSet)
 
 }

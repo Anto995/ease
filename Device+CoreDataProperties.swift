@@ -18,5 +18,6 @@ extension Device {
 
     @NSManaged public var name: String?
     @NSManaged public var id: Int16
+    @NSManaged public var is_contained: Room?
 
 }
