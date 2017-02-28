@@ -36,6 +36,24 @@ class PersistenceManager {
         
     }
     
+    static func fetchData() -> [Room] {
+        
+        var rooms = [Room]()
+        
+        let context = getContext()
+        
+        let fetchRequest = NSFetchRequest<Room>(entityName: "Room")
+        
+        do {
+            try rooms = context.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Error in fetch \(error.code)")
+        }
+        
+        return rooms
+        
+    }
+    
     
     static func saveContext() {
         let context = getContext()
