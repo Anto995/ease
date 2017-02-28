@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44159ED71E65E27E00818548 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44159ED61E65E27E00818548 /* RoomCell.swift */; };
 		A9593BE31E64872B0019B0D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593BE21E64872B0019B0D0 /* AppDelegate.swift */; };
 		A9593BE51E64872B0019B0D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593BE41E64872B0019B0D0 /* ViewController.swift */; };
 		A9593BE81E64872B0019B0D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9593BE61E64872B0019B0D0 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44159ED61E65E27E00818548 /* RoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		A9593BDF1E64872B0019B0D0 /* Ease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9593BE21E64872B0019B0D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9593BE41E64872B0019B0D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
