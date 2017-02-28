@@ -3,13 +3,14 @@
     <entity name="Device" representedClassName="Device" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="is_contained" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="contains" inverseEntity="Room" syncable="YES"/>
     </entity>
     <entity name="Room" representedClassName="Room" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" minValueString="1" syncable="YES"/>
-        <relationship name="contains" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Device" syncable="YES"/>
+        <relationship name="contains" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Device" inverseName="is_contained" inverseEntity="Device" syncable="YES"/>
     </entity>
     <elements>
         <element name="Room" positionX="-54" positionY="-9" width="128" height="75"/>
-        <element name="Device" positionX="-36" positionY="27" width="128" height="75"/>
+        <element name="Device" positionX="-36" positionY="27" width="128" height="90"/>
     </elements>
 </model>
