@@ -1,14 +1,14 @@
 //
-//  RoomViewController.swift
+//  RoomDetailsViewController.swift
 //  Ease
 //
-//  Created by Antonio Scialdone on 27/02/2017.
+//  Created by Antonio Scialdone on 28/02/2017.
 //  Copyright © 2017 Antonio Scialdone. All rights reserved.
 //
 
 import UIKit
 
-class RoomViewController: UIViewController {
+class RoomDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

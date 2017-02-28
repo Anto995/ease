@@ -246,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="4549.6000000000004" y="-595.05247376311854"/>
         </scene>
-        <!--Item-->
+        <!--Rooms View Controller-->
         <scene sceneID="Cru-eh-dm2">
             <objects>
-                <tableViewController modalTransitionStyle="flipHorizontal" id="QGY-3P-RVQ" customClass="RoomsViewController" customModule="Ease" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="flipHorizontal" id="QGY-3P-RVQ" userLabel="Rooms View Controller" customClass="RoomsViewController" customModule="Ease" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" id="ggE-7f-bKf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="6625" y="980"/>
         </scene>
-        <!--Room View Controller-->
+        <!--RoomDetails View Controller-->
         <scene sceneID="O2R-Tn-PSs">
             <objects>
-                <viewController id="tCk-99-CR7" customClass="RoomViewController" customModule="Ease" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tCk-99-CR7" userLabel="RoomDetails View Controller" customClass="RoomDetailsViewController" customModule="Ease" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZBf-ZW-Xt8"/>
                         <viewControllerLayoutGuide type="bottom" id="Rjz-gx-sQx"/>
@@ -312,10 +312,10 @@
             </objects>
             <point key="canvasLocation" x="6625" y="1890"/>
         </scene>
-        <!--Item 2-->
+        <!--HomePage View Controller-->
         <scene sceneID="lyT-PE-QGA">
             <objects>
-                <viewController id="rac-O8-oo2" sceneMemberID="viewController">
+                <viewController id="rac-O8-oo2" userLabel="HomePage View Controller" customClass="HomePageViewController" customModule="Ease" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Bn-In-29h"/>
                         <viewControllerLayoutGuide type="bottom" id="IdD-hd-d79"/>
@@ -331,10 +331,10 @@
             </objects>
             <point key="canvasLocation" x="5822" y="979"/>
         </scene>
-        <!--Item 1-->
+        <!--Settings View Controller-->
         <scene sceneID="dwz-n4-Vkc">
             <objects>
-                <viewController id="bF3-H2-jaR" sceneMemberID="viewController">
+                <viewController id="bF3-H2-jaR" userLabel="Settings View Controller" customClass="SettingsViewController" customModule="Ease" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mCz-g4-qei"/>
                         <viewControllerLayoutGuide type="bottom" id="cE5-RB-CKg"/>
@@ -349,25 +349,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSV-f5-apm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7482" y="979"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="hXa-jF-5KN">
-            <objects>
-                <viewController id="XFr-j9-TcT" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Q9x-PE-Opj"/>
-                        <viewControllerLayoutGuide type="bottom" id="Xgr-LQ-DCb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aIO-K8-rpT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="OXG-NW-FMk"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hXn-Yx-IZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8382" y="994"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Z7r-yT-ctp">
@@ -384,7 +365,6 @@
                         <segue destination="QGY-3P-RVQ" kind="relationship" relationship="viewControllers" id="1HN-uk-Rb5"/>
                         <segue destination="bF3-H2-jaR" kind="relationship" relationship="viewControllers" id="3om-sr-H5S"/>
                         <segue destination="rac-O8-oo2" kind="relationship" relationship="viewControllers" id="fOp-y8-6b3"/>
-                        <segue destination="XFr-j9-TcT" kind="relationship" relationship="viewControllers" id="1xV-ho-sRN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oe-IN-K14" userLabel="First Responder" sceneMemberID="firstResponder"/>
