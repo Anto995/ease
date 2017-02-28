@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44159ED71E65E27E00818548 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44159ED61E65E27E00818548 /* RoomCell.swift */; };
 		A9593BE31E64872B0019B0D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593BE21E64872B0019B0D0 /* AppDelegate.swift */; };
 		A9593BE51E64872B0019B0D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593BE41E64872B0019B0D0 /* ViewController.swift */; };
 		A9593BE81E64872B0019B0D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9593BE61E64872B0019B0D0 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44159ED61E65E27E00818548 /* RoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		A9593BDF1E64872B0019B0D0 /* Ease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9593BE21E64872B0019B0D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9593BE41E64872B0019B0D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				A9AF26FC1E65B75600E280A9 /* RoomDetailsViewController.swift */,
 				A9AF27011E65BC5B00E280A9 /* easeModel.xcdatamodeld */,
 				A9AF270E1E65C0DC00E280A9 /* PersistenceManager.swift */,
+				44159ED61E65E27E00818548 /* RoomCell.swift */,
 			);
 			path = Ease;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				A9593BE31E64872B0019B0D0 /* AppDelegate.swift in Sources */,
 				A9AF271C1E65CBFD00E280A9 /* Room+CoreDataClass.swift in Sources */,
 				A9AF27031E65BC5B00E280A9 /* easeModel.xcdatamodeld in Sources */,
+				44159ED71E65E27E00818548 /* RoomCell.swift in Sources */,
 				A9AF271E1E65CBFD00E280A9 /* Device+CoreDataClass.swift in Sources */,
 				A9AF26FD1E65B75600E280A9 /* RoomDetailsViewController.swift in Sources */,
 				A9593C151E64CEF30019B0D0 /* RoomsViewController.swift in Sources */,
