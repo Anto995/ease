@@ -91,10 +91,9 @@ class RoomsViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         switch segue.identifier{
-            case "segueRoom":
+            default:
             print("ciao")
-            
-        }
+                    }
         
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
