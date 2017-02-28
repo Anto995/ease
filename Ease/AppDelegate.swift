@@ -42,5 +42,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func application(_application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        if (shortcutItem.type == "com.mycompany.prova") {
+            let controller = UIAlertController(title: "App lanciata tramite scorciatoia!", message: "Identifier della quick action: \(shortcutItem.type)", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            controller.addAction(action)
+            
+            DispatchQueue.main.async {
+                self.window!.rootViewController?.present(controller, animated: true, completion: nil)
+            }
+        }
+    }
 }
 
