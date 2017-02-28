@@ -16,6 +16,8 @@
 		A9593C031E64872B0019B0D0 /* EaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593C021E64872B0019B0D0 /* EaseUITests.swift */; };
 		A9593C111E6493FC0019B0D0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593C101E6493FC0019B0D0 /* HomeViewController.swift */; };
 		A9593C131E64A4AC0019B0D0 /* ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9593C121E64A4AC0019B0D0 /* ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg */; };
+		A9593C151E64CEF30019B0D0 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593C141E64CEF30019B0D0 /* RoomsViewController.swift */; };
+		A9593C171E64D1D90019B0D0 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593C161E64D1D90019B0D0 /* RoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		A9593C041E64872B0019B0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9593C101E6493FC0019B0D0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
 		A9593C121E64A4AC0019B0D0 /* ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg"; sourceTree = "<group>"; };
+		A9593C141E64CEF30019B0D0 /* RoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
+		A9593C161E64D1D90019B0D0 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				A9593BE91E64872B0019B0D0 /* Assets.xcassets */,
 				A9593BEB1E64872B0019B0D0 /* LaunchScreen.storyboard */,
 				A9593BEE1E64872B0019B0D0 /* Info.plist */,
+				A9593C141E64CEF30019B0D0 /* RoomsViewController.swift */,
+				A9593C161E64D1D90019B0D0 /* RoomViewController.swift */,
 			);
 			path = Ease;
 			sourceTree = "<group>";
@@ -272,6 +278,8 @@
 				A9593BE51E64872B0019B0D0 /* ViewController.swift in Sources */,
 				A9593C111E6493FC0019B0D0 /* HomeViewController.swift in Sources */,
 				A9593BE31E64872B0019B0D0 /* AppDelegate.swift in Sources */,
+				A9593C171E64D1D90019B0D0 /* RoomViewController.swift in Sources */,
+				A9593C151E64CEF30019B0D0 /* RoomsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
