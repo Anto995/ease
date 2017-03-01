@@ -11,5 +11,5 @@ import CoreData
 
 @objc(Room)
 public class Room: NSManagedObject {
-
+   print("Ciao")
 }
