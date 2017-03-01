@@ -54,9 +54,10 @@ class RoomsViewController: UITableViewController {
         
         var arrayRoom = PersistenceManager.fetchData()
         let room = arrayRoom[indexPath.row]
-        cell.devNumber.text = "\(room.contains?.count)"
+        cell.devNumber.text = "\(room.contains?.count)!"
         cell.roomName.text = room.name
-        
+        let imagePt = UIImage(data: room.image as! Data)
+        cell.roomImage.image = imagePt
         return cell
 
         

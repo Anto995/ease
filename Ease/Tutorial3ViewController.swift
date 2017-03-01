@@ -8,9 +8,42 @@
 
 import UIKit
 
-class Tutorial3ViewController: UIViewController {
+class Tutorial3ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var topLabel: UILabel!
+    var chosenImage : UIImage?
+    
+    @IBAction func takePhotoCamera(_ sender: UIButton) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = UIImagePickerControllerSourceType.camera
+        picker.showsCameraControls = true
+        
+        self.present(picker, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func takePhotoLibrary(_ sender: UIButton) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        self.present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        chosenImage = (info[UIImagePickerControllerEditedImage] as! UIImage)
+        
+        imageView.image = chosenImage
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,15 +65,22 @@ class Tutorial3ViewController: UIViewController {
         
         
     }
+    
+    
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let dstView = segue.destination as! Tutorial4ViewController
+        
+        dstView.image = chosenImage
+        
     }
-    */
+    
 
 }

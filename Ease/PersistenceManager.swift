@@ -36,6 +36,33 @@ class PersistenceManager {
         
     }
     
+    static func createRoom(name: String, image: UIImage ) -> Room {
+        let context = getContext()
+        
+        let room = NSEntityDescription.insertNewObject(forEntityName: "Room", into: context) as! Room
+        let data = UIImagePNGRepresentation(image) as NSData?
+        room.name = name
+        room.image = data
+        
+        saveContext()
+        return room
+    }
+    
+    static func insertDevice(name: String, id: Int16, into: Room ) {
+        
+        let context = getContext()
+        
+        let device = NSEntityDescription.insertNewObject(forEntityName: "Device", into: context) as! Device
+        
+        device.id = id
+        device.name = name
+        
+        device.is_contained = into
+        
+        saveContext()
+        
+    }
+    
     static func fetchData() -> [Room] {
         
         var rooms = [Room]()

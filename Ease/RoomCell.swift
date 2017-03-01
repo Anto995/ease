@@ -11,6 +11,8 @@ import UIKit
 class RoomCell: UITableViewCell {
 
     @IBOutlet weak var devNumber: UILabel!
+    
+    @IBOutlet weak var roomImage: UIImageView!
     @IBOutlet weak var roomName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

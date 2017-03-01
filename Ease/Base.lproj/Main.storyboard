@@ -149,13 +149,16 @@
                                 <rect key="frame" x="150" y="193" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take a pitcure"/>
+                                <connections>
+                                    <action selector="takePhotoCamera:" destination="T1k-on-0He" eventType="touchUpInside" id="5r0-ER-I7q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hi7-j9-q3b">
                                 <rect key="frame" x="135" y="231" width="127" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Chose from library"/>
                                 <connections>
-                                    <segue destination="iek-AW-OVY" kind="show" id="vca-Bf-WPg"/>
+                                    <action selector="takePhotoLibrary:" destination="T1k-on-0He" eventType="touchUpInside" id="4Ya-fN-uhf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take a pitcure to identify your room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFU-cK-3bh">
@@ -165,21 +168,29 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6T3-5F-WUk">
+                                <rect key="frame" x="67" y="327" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="RiR-zj-1cg">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="oK0-Bm-PhL">
                             <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="iek-AW-OVY" kind="show" id="BPb-Ke-JzK"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageView" destination="6T3-5F-WUk" id="QlO-ud-SV5"/>
                         <outlet property="topLabel" destination="HM1-31-10t" id="hn7-zv-U8Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDM-lR-mbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3533.3333333333335" y="-591.84782608695662"/>
+            <point key="canvasLocation" x="3452" y="-591"/>
         </scene>
         <!--Tutorial4 View Controller-->
         <scene sceneID="3wr-Bj-2FB">
@@ -232,12 +243,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="nameTextField" destination="zyV-cE-ODy" id="uXT-7J-cb8"/>
                         <outlet property="topLabel" destination="8Hs-UM-3ed" id="SvG-s2-qi7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4KY-HT-KIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4440.579710144928" y="-591.03260869565224"/>
+            <point key="canvasLocation" x="4426" y="-591"/>
         </scene>
         <!--Tutorial5 View Controller-->
         <scene sceneID="chs-Fs-00u">
@@ -255,9 +267,6 @@
                                 <rect key="frame" x="132" y="402" width="150" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
-                                <connections>
-                                    <segue destination="0PA-Pz-rCw" kind="show" id="rEy-bi-nd2"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Room creation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVp-hx-Mx6">
                                 <rect key="frame" x="121" y="28" width="172" height="21"/>
@@ -283,6 +292,9 @@
                     <navigationItem key="navigationItem" id="OkX-MW-RX3">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="gYE-JY-EQW">
                             <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="0PA-Pz-rCw" kind="show" id="ZG0-wG-qFV"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -305,7 +317,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Erd-VV-r8W" id="JIE-Xk-NE3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="139.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3il-mO-Z9A">
@@ -349,7 +361,8 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <connections>
                                     <outlet property="devNumber" destination="qbR-B7-Aiz" id="bbv-YL-LWC"/>
-                                    <outlet property="roomName" destination="qbR-B7-Aiz" id="3Qw-85-mZq"/>
+                                    <outlet property="roomImage" destination="3il-mO-Z9A" id="adD-36-Km3"/>
+                                    <outlet property="roomName" destination="J7r-y5-PNo" id="ylc-61-4cp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -475,7 +488,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ie0-Jk-Wke" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0qU-O7-CNe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0qU-O7-CNe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -494,6 +507,6 @@
         <image name="ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg" width="1024" height="643"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rEy-bi-nd2"/>
+        <segue reference="ZG0-wG-qFV"/>
     </inferredMetricsTieBreakers>
 </document>

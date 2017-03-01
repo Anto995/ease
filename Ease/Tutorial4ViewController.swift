@@ -12,6 +12,10 @@ class Tutorial4ViewController: UIViewController {
 
     @IBOutlet weak var topLabel: UILabel!
     
+    var image: UIImage!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,14 +31,18 @@ class Tutorial4ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         print("\(topLabel.center.x) \(topLabel.center.y)")
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let dstView = segue.destination as! Tutorial5ViewController
+        dstView.image = image
+        dstView.name = nameTextField.text
+        
     }
-    */
+    
 
 }
