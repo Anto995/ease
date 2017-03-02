@@ -10,7 +10,7 @@ import UIKit
 
 class Tutorial4ViewController: UIViewController {
 
-    @IBOutlet weak var topLabel: UILabel!
+    
     
     var image: UIImage!
     
@@ -18,7 +18,8 @@ class Tutorial4ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -27,10 +28,19 @@ class Tutorial4ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    override func viewDidAppear(_ animated: Bool) {
-        print("\(topLabel.center.x) \(topLabel.center.y)")
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if nameTextField.text == "" {
+            let alert = UIAlertController(title: "Warning", message: "Inserisci un nome per la stanza", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return false
+        } else {
+            
+            return true
+        }
     }
+    
     
     // MARK: - Navigation
 
@@ -41,6 +51,8 @@ class Tutorial4ViewController: UIViewController {
         let dstView = segue.destination as! Tutorial5ViewController
         dstView.image = image
         dstView.name = nameTextField.text
+         
+        
         
     }
     

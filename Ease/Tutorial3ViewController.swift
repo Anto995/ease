@@ -58,12 +58,16 @@ class Tutorial3ViewController: UIViewController, UIImagePickerControllerDelegate
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        if topLabel.center != CGPoint(x: 50, y: 10) {
-            UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: .curveLinear, animations: { () -> Void in self.topLabel.center = CGPoint(x:207,y:38.5 )}, completion: nil)
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if chosenImage == nil {
+            let alert = UIAlertController(title: "Warning", message: "Choose a picture", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return false
+        } else {
+            
+            return true
         }
-        
-        
     }
     
     

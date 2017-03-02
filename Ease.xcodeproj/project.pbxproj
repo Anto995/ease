@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A908CDC71E674DE9001D69AE /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908CDC61E674DE9001D69AE /* CollectionViewController.swift */; };
+		A908CDC91E674E39001D69AE /* CollectionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908CDC81E674E39001D69AE /* CollectionSource.swift */; };
+		A908CDCB1E675276001D69AE /* RoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908CDCA1E675276001D69AE /* RoomCollectionViewCell.swift */; };
+		A908CDD01E681448001D69AE /* AddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908CDCF1E681448001D69AE /* AddRoomViewController.swift */; };
 		A92D907E1E65EE5200221B5F /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D907D1E65EE5200221B5F /* RoomCell.swift */; };
 		A9593BE31E64872B0019B0D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593BE21E64872B0019B0D0 /* AppDelegate.swift */; };
 		A9593BE51E64872B0019B0D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593BE41E64872B0019B0D0 /* ViewController.swift */; };
@@ -18,6 +22,15 @@
 		A9593C111E6493FC0019B0D0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593C101E6493FC0019B0D0 /* HomeViewController.swift */; };
 		A9593C131E64A4AC0019B0D0 /* ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9593C121E64A4AC0019B0D0 /* ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg */; };
 		A9593C151E64CEF30019B0D0 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9593C141E64CEF30019B0D0 /* RoomsViewController.swift */; };
+		A98C3FFF1E66EA4000B4DA7F /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98C3FFE1E66EA4000B4DA7F /* HomeKit.framework */; };
+		A98C40061E671E1700B4DA7F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98C40051E671E1700B4DA7F /* NotificationCenter.framework */; };
+		A98C40091E671E1700B4DA7F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C40081E671E1700B4DA7F /* TodayViewController.swift */; };
+		A98C400C1E671E1700B4DA7F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98C400A1E671E1700B4DA7F /* MainInterface.storyboard */; };
+		A98C40101E671E1700B4DA7F /* easeWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A98C40041E671E1700B4DA7F /* easeWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A98C40351E6738A400B4DA7F /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98C402C1E67371600B4DA7F /* Socket.framework */; };
+		A98C403B1E6739E500B4DA7F /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C40381E6739E500B4DA7F /* Socket.swift */; };
+		A98C403C1E6739E500B4DA7F /* SocketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C40391E6739E500B4DA7F /* SocketProtocols.swift */; };
+		A98C403D1E6739E500B4DA7F /* SocketUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C403A1E6739E500B4DA7F /* SocketUtils.swift */; };
 		A9AF26F81E65B5F000E280A9 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF26F71E65B5F000E280A9 /* HomePageViewController.swift */; };
 		A9AF26FA1E65B66F00E280A9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF26F91E65B66F00E280A9 /* SettingsViewController.swift */; };
 		A9AF26FD1E65B75600E280A9 /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF26FC1E65B75600E280A9 /* RoomDetailsViewController.swift */; };
@@ -49,9 +62,69 @@
 			remoteGlobalIDString = A9593BDE1E64872A0019B0D0;
 			remoteInfo = Ease;
 		};
+		A98C400E1E671E1700B4DA7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9593BD71E64872A0019B0D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A98C40031E671E1700B4DA7F;
+			remoteInfo = easeWidget;
+		};
+		A98C40291E67371600B4DA7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98C40231E67371600B4DA7F /* BlueSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C0F4BF61C4E84CC008B2B0A;
+			remoteInfo = Socket;
+		};
+		A98C402B1E67371600B4DA7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98C40231E67371600B4DA7F /* BlueSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CC36E021C4EA1BE00BAA659;
+			remoteInfo = "Socket-iOS";
+		};
+		A98C402D1E67371600B4DA7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98C40231E67371600B4DA7F /* BlueSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CA9B1631C98A00400E607FB;
+			remoteInfo = SocketTests;
+		};
+		A98C40311E67389800B4DA7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98C40231E67371600B4DA7F /* BlueSocket.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CC36DF61C4EA1BE00BAA659;
+			remoteInfo = "Socket-iOS";
+		};
+		A98C40331E67389B00B4DA7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98C40231E67371600B4DA7F /* BlueSocket.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C0F4BF51C4E84CC008B2B0A;
+			remoteInfo = Socket;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A98C40141E671E1700B4DA7F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A98C40101E671E1700B4DA7F /* easeWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A908CDC61E674DE9001D69AE /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		A908CDC81E674E39001D69AE /* CollectionSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionSource.swift; sourceTree = "<group>"; };
+		A908CDCA1E675276001D69AE /* RoomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomCollectionViewCell.swift; path = Assets.xcassets/RoomCollectionViewCell.swift; sourceTree = "<group>"; };
+		A908CDCF1E681448001D69AE /* AddRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRoomViewController.swift; sourceTree = "<group>"; };
 		A92D907D1E65EE5200221B5F /* RoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		A9593BDF1E64872B0019B0D0 /* Ease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9593BE21E64872B0019B0D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +142,19 @@
 		A9593C101E6493FC0019B0D0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
 		A9593C121E64A4AC0019B0D0 /* ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ikea-clean-green-and-clutter-free-__1364315962817-s4.jpg"; sourceTree = "<group>"; };
 		A9593C141E64CEF30019B0D0 /* RoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
+		A98C3FFC1E66EA4000B4DA7F /* Ease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ease.entitlements; sourceTree = "<group>"; };
+		A98C3FFE1E66EA4000B4DA7F /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		A98C40041E671E1700B4DA7F /* easeWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = easeWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98C40051E671E1700B4DA7F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A98C40081E671E1700B4DA7F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A98C400B1E671E1700B4DA7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A98C400D1E671E1700B4DA7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A98C401F1E6736B400B4DA7F /* HelloTCP */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HelloTCP; path = ../../../Downloads/HelloTCP; sourceTree = "<group>"; };
+		A98C40211E6736CB00B4DA7F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = "../../../Downloads/HelloTCP/Packages/Socket-0.12.33/Package.swift"; sourceTree = "<group>"; };
+		A98C40231E67371600B4DA7F /* BlueSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueSocket.xcodeproj; path = "../../../Downloads/HelloTCP/Packages/Socket-0.12.33/BlueSocket.xcodeproj"; sourceTree = "<group>"; };
+		A98C40381E6739E500B4DA7F /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		A98C40391E6739E500B4DA7F /* SocketProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketProtocols.swift; sourceTree = "<group>"; };
+		A98C403A1E6739E500B4DA7F /* SocketUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketUtils.swift; sourceTree = "<group>"; };
 		A9AF26F71E65B5F000E280A9 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		A9AF26F91E65B66F00E280A9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A9AF26FC1E65B75600E280A9 /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98C3FFF1E66EA4000B4DA7F /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +194,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A98C40011E671E1700B4DA7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98C40351E6738A400B4DA7F /* Socket.framework in Frameworks */,
+				A98C40061E671E1700B4DA7F /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -116,11 +212,16 @@
 				A9AF272C1E65EBFF00E280A9 /* Device+CoreDataClass.swift */,
 				A9AF272D1E65EBFF00E280A9 /* Device+CoreDataProperties.swift */,
 				A9AF272E1E65EBFF00E280A9 /* Room+CoreDataClass.swift */,
+				A98C40381E6739E500B4DA7F /* Socket.swift */,
+				A98C40391E6739E500B4DA7F /* SocketProtocols.swift */,
+				A98C403A1E6739E500B4DA7F /* SocketUtils.swift */,
 				A9AF272F1E65EBFF00E280A9 /* Room+CoreDataProperties.swift */,
 				A9593BE11E64872B0019B0D0 /* Ease */,
 				A9593BF61E64872B0019B0D0 /* EaseTests */,
 				A9593C011E64872B0019B0D0 /* EaseUITests */,
+				A98C40071E671E1700B4DA7F /* easeWidget */,
 				A9593BE01E64872B0019B0D0 /* Products */,
+				A98C3FFD1E66EA4000B4DA7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +231,7 @@
 				A9593BDF1E64872B0019B0D0 /* Ease.app */,
 				A9593BF31E64872B0019B0D0 /* EaseTests.xctest */,
 				A9593BFE1E64872B0019B0D0 /* EaseUITests.xctest */,
+				A98C40041E671E1700B4DA7F /* easeWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +239,7 @@
 		A9593BE11E64872B0019B0D0 /* Ease */ = {
 			isa = PBXGroup;
 			children = (
+				A98C3FFC1E66EA4000B4DA7F /* Ease.entitlements */,
 				A9593C101E6493FC0019B0D0 /* HomeViewController.swift */,
 				A9593BE21E64872B0019B0D0 /* AppDelegate.swift */,
 				A9593BE41E64872B0019B0D0 /* ViewController.swift */,
@@ -157,6 +260,10 @@
 				A9AF27241E65DA0000E280A9 /* Tutorial3ViewController.swift */,
 				A9AF27261E65DA1500E280A9 /* Tutorial4ViewController.swift */,
 				A9AF27281E65DA2F00E280A9 /* Tutorial5ViewController.swift */,
+				A908CDC61E674DE9001D69AE /* CollectionViewController.swift */,
+				A908CDC81E674E39001D69AE /* CollectionSource.swift */,
+				A908CDCA1E675276001D69AE /* RoomCollectionViewCell.swift */,
+				A908CDCF1E681448001D69AE /* AddRoomViewController.swift */,
 			);
 			path = Ease;
 			sourceTree = "<group>";
@@ -179,6 +286,38 @@
 			path = EaseUITests;
 			sourceTree = "<group>";
 		};
+		A98C3FFD1E66EA4000B4DA7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A98C40231E67371600B4DA7F /* BlueSocket.xcodeproj */,
+				A98C40211E6736CB00B4DA7F /* Package.swift */,
+				A98C401F1E6736B400B4DA7F /* HelloTCP */,
+				A98C3FFE1E66EA4000B4DA7F /* HomeKit.framework */,
+				A98C40051E671E1700B4DA7F /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A98C40071E671E1700B4DA7F /* easeWidget */ = {
+			isa = PBXGroup;
+			children = (
+				A98C40081E671E1700B4DA7F /* TodayViewController.swift */,
+				A98C400A1E671E1700B4DA7F /* MainInterface.storyboard */,
+				A98C400D1E671E1700B4DA7F /* Info.plist */,
+			);
+			path = easeWidget;
+			sourceTree = "<group>";
+		};
+		A98C40241E67371600B4DA7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A98C402A1E67371600B4DA7F /* Socket.framework */,
+				A98C402C1E67371600B4DA7F /* Socket.framework */,
+				A98C402E1E67371600B4DA7F /* SocketTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,10 +328,12 @@
 				A9593BDB1E64872A0019B0D0 /* Sources */,
 				A9593BDC1E64872A0019B0D0 /* Frameworks */,
 				A9593BDD1E64872A0019B0D0 /* Resources */,
+				A98C40141E671E1700B4DA7F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A98C400F1E671E1700B4DA7F /* PBXTargetDependency */,
 			);
 			name = Ease;
 			productName = Ease;
@@ -235,6 +376,25 @@
 			productReference = A9593BFE1E64872B0019B0D0 /* EaseUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A98C40031E671E1700B4DA7F /* easeWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A98C40111E671E1700B4DA7F /* Build configuration list for PBXNativeTarget "easeWidget" */;
+			buildPhases = (
+				A98C40001E671E1700B4DA7F /* Sources */,
+				A98C40011E671E1700B4DA7F /* Frameworks */,
+				A98C40021E671E1700B4DA7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A98C40341E67389B00B4DA7F /* PBXTargetDependency */,
+				A98C40321E67389800B4DA7F /* PBXTargetDependency */,
+			);
+			name = easeWidget;
+			productName = easeWidget;
+			productReference = A98C40041E671E1700B4DA7F /* easeWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -249,6 +409,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3635YFUH74;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+						};
 					};
 					A9593BF21E64872B0019B0D0 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -261,6 +426,11 @@
 						DevelopmentTeam = 3635YFUH74;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A9593BDE1E64872A0019B0D0;
+					};
+					A98C40031E671E1700B4DA7F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3635YFUH74;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -275,14 +445,45 @@
 			mainGroup = A9593BD61E64872A0019B0D0;
 			productRefGroup = A9593BE01E64872B0019B0D0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A98C40241E67371600B4DA7F /* Products */;
+					ProjectRef = A98C40231E67371600B4DA7F /* BlueSocket.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A9593BDE1E64872A0019B0D0 /* Ease */,
 				A9593BF21E64872B0019B0D0 /* EaseTests */,
 				A9593BFD1E64872B0019B0D0 /* EaseUITests */,
+				A98C40031E671E1700B4DA7F /* easeWidget */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A98C402A1E67371600B4DA7F /* Socket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Socket.framework;
+			remoteRef = A98C40291E67371600B4DA7F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A98C402C1E67371600B4DA7F /* Socket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Socket.framework;
+			remoteRef = A98C402B1E67371600B4DA7F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A98C402E1E67371600B4DA7F /* SocketTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SocketTests.xctest;
+			remoteRef = A98C402D1E67371600B4DA7F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A9593BDD1E64872A0019B0D0 /* Resources */ = {
@@ -310,6 +511,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A98C40021E671E1700B4DA7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98C400C1E671E1700B4DA7F /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -317,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A908CDC71E674DE9001D69AE /* CollectionViewController.swift in Sources */,
 				A9AF27291E65DA2F00E280A9 /* Tutorial5ViewController.swift in Sources */,
 				A9593BE51E64872B0019B0D0 /* ViewController.swift in Sources */,
 				A9AF27231E65D9E700E280A9 /* Tutorial2ViewController.swift in Sources */,
@@ -325,16 +535,22 @@
 				A9593C111E6493FC0019B0D0 /* HomeViewController.swift in Sources */,
 				A9AF27311E65EBFF00E280A9 /* Device+CoreDataProperties.swift in Sources */,
 				A9AF26FA1E65B66F00E280A9 /* SettingsViewController.swift in Sources */,
+				A98C403B1E6739E500B4DA7F /* Socket.swift in Sources */,
 				A9AF270F1E65C0DC00E280A9 /* PersistenceManager.swift in Sources */,
 				A9AF26F81E65B5F000E280A9 /* HomePageViewController.swift in Sources */,
 				A9AF27211E65D9CC00E280A9 /* Tutorial1ViewController.swift in Sources */,
+				A98C403C1E6739E500B4DA7F /* SocketProtocols.swift in Sources */,
+				A98C403D1E6739E500B4DA7F /* SocketUtils.swift in Sources */,
 				A9AF27301E65EBFF00E280A9 /* Device+CoreDataClass.swift in Sources */,
 				A9593BE31E64872B0019B0D0 /* AppDelegate.swift in Sources */,
+				A908CDCB1E675276001D69AE /* RoomCollectionViewCell.swift in Sources */,
 				A9AF27031E65BC5B00E280A9 /* easeModel.xcdatamodeld in Sources */,
 				A9AF26FD1E65B75600E280A9 /* RoomDetailsViewController.swift in Sources */,
 				A9AF27251E65DA0000E280A9 /* Tutorial3ViewController.swift in Sources */,
+				A908CDD01E681448001D69AE /* AddRoomViewController.swift in Sources */,
 				A92D907E1E65EE5200221B5F /* RoomCell.swift in Sources */,
 				A9593C151E64CEF30019B0D0 /* RoomsViewController.swift in Sources */,
+				A908CDC91E674E39001D69AE /* CollectionSource.swift in Sources */,
 				A9AF27321E65EBFF00E280A9 /* Room+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +571,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A98C40001E671E1700B4DA7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98C40091E671E1700B4DA7F /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -367,6 +591,21 @@
 			isa = PBXTargetDependency;
 			target = A9593BDE1E64872A0019B0D0 /* Ease */;
 			targetProxy = A9593BFF1E64872B0019B0D0 /* PBXContainerItemProxy */;
+		};
+		A98C400F1E671E1700B4DA7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A98C40031E671E1700B4DA7F /* easeWidget */;
+			targetProxy = A98C400E1E671E1700B4DA7F /* PBXContainerItemProxy */;
+		};
+		A98C40321E67389800B4DA7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Socket-iOS";
+			targetProxy = A98C40311E67389800B4DA7F /* PBXContainerItemProxy */;
+		};
+		A98C40341E67389B00B4DA7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Socket;
+			targetProxy = A98C40331E67389B00B4DA7F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -385,6 +624,14 @@
 				A9593BEC1E64872B0019B0D0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A98C400A1E671E1700B4DA7F /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A98C400B1E671E1700B4DA7F /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -486,7 +733,9 @@
 		A9593C081E64872B0019B0D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Ease/Ease.entitlements;
 				DEVELOPMENT_TEAM = 3635YFUH74;
 				INFOPLIST_FILE = Ease/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -499,7 +748,9 @@
 		A9593C091E64872B0019B0D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Ease/Ease.entitlements;
 				DEVELOPMENT_TEAM = 3635YFUH74;
 				INFOPLIST_FILE = Ease/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -567,6 +818,32 @@
 			};
 			name = Release;
 		};
+		A98C40121E671E1700B4DA7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3635YFUH74;
+				INFOPLIST_FILE = easeWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.ease.com.easeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A98C40131E671E1700B4DA7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3635YFUH74;
+				INFOPLIST_FILE = easeWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.ease.com.easeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -602,6 +879,15 @@
 			buildConfigurations = (
 				A9593C0E1E64872B0019B0D0 /* Debug */,
 				A9593C0F1E64872B0019B0D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98C40111E671E1700B4DA7F /* Build configuration list for PBXNativeTarget "easeWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98C40121E671E1700B4DA7F /* Debug */,
+				A98C40131E671E1700B4DA7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

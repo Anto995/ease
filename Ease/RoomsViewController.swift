@@ -16,7 +16,7 @@ class RoomsViewController: UITableViewController {
         
 
         
-        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         
     
         // Uncomment the following line to preserve selection between presentations
@@ -31,6 +31,8 @@ class RoomsViewController: UITableViewController {
        
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
         override func viewWillAppear(_ animated: Bool) {
             tableView.reloadData()
