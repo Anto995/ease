@@ -8,6 +8,13 @@
 
 import UIKit
 
+var favoriteLights =  [DeviceLight]()
+var allLights = [DeviceLight]()
+var scenes = [Scenary]()
+var rooms = [Room]()
+
+var con = OWNConnection(ip: "192.168.1.35", port: 20000)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         return true
     }
 
