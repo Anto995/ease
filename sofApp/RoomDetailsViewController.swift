@@ -11,6 +11,7 @@ import UIKit
 class RoomDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var room: Room!
+    var timer: Timer!
     override func viewDidLoad() {
         super.viewDidLoad()
         numDevices.text = "\(room.lightInstalled.count)"
@@ -38,19 +39,37 @@ class RoomDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        if (favoriteLights.count + favoriteTemp.count + favoriteShutters.count) == 0{
+            return 1
+        } else {
+            return 3
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         var rowCount = 0
         if section == 0 {
-            rowCount = room.lightInstalled.count
+            if (room.lightInstalled.count == 0) {
+                return 1
+            } else {
+               rowCount = room.lightInstalled.count
+            }
+            
         }
         if section == 1 {
-            rowCount = room.shutterInstalled.count
+            if (room.shutterInstalled.count == 0) {
+                return 1
+            } else {
+                rowCount = room.shutterInstalled.count
+            }
         }
         if section == 2 {
-            rowCount = room.tempInstalled.count
+            if (room.tempInstalled.count == 0) {
+                return 1
+            } else {
+                rowCount = room.tempInstalled.count
+            }
         }
         return rowCount
     }
@@ -58,6 +77,11 @@ class RoomDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
+            if (room.lightInstalled.count == 0) {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath) as! DefaultTableViewCell
+                cell.myLabel.text = "Add a light"
+                return cell
+            }
             let lightDev = room.lightInstalled[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "lightCell", for: indexPath) as! LightTableViewCell
             cell.myImageView.image = #imageLiteral(resourceName: "light")
@@ -72,13 +96,22 @@ class RoomDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             }
             return cell
         } else if indexPath.section == 1 {
+            if (room.shutterInstalled.count == 0) {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath) as! DefaultTableViewCell
+                cell.myLabel.text = "Add a shutter"
+                return cell
+            }
             let shutDev = room.shutterInstalled[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "shutterCell", for: indexPath) as! ShutterTableViewCell
             cell.myImageView.image = #imageLiteral(resourceName: "shutter")
             cell.shutter.text = "Shutter: \(shutDev.id)"
             return cell
         } else {
-            
+            if (room.tempInstalled.count == 0) {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath) as! DefaultTableViewCell
+                cell.myLabel.text = "Add a termo"
+                return cell
+            }
             let tempDev = room.tempInstalled[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "termometerCell", for: indexPath) as! TermometerTableViewCell
             cell.myImageView.image = #imageLiteral(resourceName: "temp")
@@ -132,11 +165,24 @@ class RoomDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.myTableView.reloadData()
+        timer=Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(updateTemperature), userInfo: nil, repeats: true)
         if (room.tempInstalled.count == 0) {
             actualTemperature.text = "No termo"
         } else {
             actualTemperature.text = "\(Float((room.tempInstalled[0].actualTemperature))!/10)"
         }
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        timer.invalidate()
+    }
+    func updateTemperature(){
+        if (room.tempInstalled.count == 0) {
+            actualTemperature.text = "No termo"
+        } else {
+            room.tempInstalled[0]=con.getRequestTemperature(id: room.tempInstalled[0].id)!
+            actualTemperature.text = "\(Float((room.tempInstalled[0].actualTemperature))!/10)"
+        }
+        
     }
     
 

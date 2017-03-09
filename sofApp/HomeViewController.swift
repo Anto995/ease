@@ -77,13 +77,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favoriteLights.count
+        if (favoriteLights.count + favoriteTemp.count + favoriteShutters.count) == 0{
+            return 1
+        } else {
+          return favoriteLights.count + favoriteTemp.count + favoriteShutters.count
+        }
+        
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if (favoriteLights.count == 0) {
+        if (favoriteLights.count + favoriteTemp.count + favoriteShutters.count) == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath) as! DefaultTableViewCell
             return cell
         }

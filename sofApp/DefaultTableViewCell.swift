@@ -20,5 +20,6 @@ class DefaultTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    @IBOutlet weak var myLabel: UILabel!
 
 }
