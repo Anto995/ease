@@ -9,7 +9,8 @@
 import UIKit
 
 class RoomDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    var timer: Timer!
     var room: Room!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,11 +133,24 @@ class RoomDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.myTableView.reloadData()
+        timer=Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(updateTemperature), userInfo: nil, repeats: true)
         if (room.tempInstalled.count == 0) {
             actualTemperature.text = "No termo"
         } else {
             actualTemperature.text = "\(Float((room.tempInstalled[0].actualTemperature))!/10)"
         }
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        timer.invalidate()
+    }
+    func updateTemperature(){
+        if (room.tempInstalled.count == 0) {
+            actualTemperature.text = "No termo"
+        } else {
+            room.tempInstalled[0]=con.getRequestTemperature(id: room.tempInstalled[0].id)!
+            actualTemperature.text = "\(Float((room.tempInstalled[0].actualTemperature))!/10)"
+        }
+        
     }
     
 
