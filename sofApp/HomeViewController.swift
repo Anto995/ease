@@ -31,7 +31,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func turnOffAllLights(_ sender: UIButton) {
-        
+        con.sendCommandLights(status: DeviceLight.STATUS.OFF)
+        for item in allLights {
+            item.status = DeviceLight.STATUS.OFF
+        }
+        myTableView.reloadData()
     }
     
     @IBAction func closeAllShutter(_ sender: UIButton) {
@@ -42,21 +46,38 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (actualScene == nil) {
-            myImageView.layer.cornerRadius = 25
-            myImageView.backgroundColor = UIColor.gray
-            myLabel.text = "Select a scene"
-        }
+        /*
         
+        if (allLights.count == 0) {
+            lightButton.isEnabled = false
+        } else {
+            lightButton.isEnabled = true
+        }
+        if (allTemp.count == 0) {
+            temperatureButton.isEnabled = false
+            myStepper.isEnabled = false
+            
+        } else {
+            temperatureButton.isEnabled = true
+            myStepper.isEnabled = true
+        }
+        if (allShutters.count == 0) {
+            shutterButton.isEnabled = false
+        } else {
+            shutterButton.isEnabled = true
+        }
+        */
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return favoriteLights.count
         
     }
     
@@ -73,6 +94,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.lightPoint.text = "Light: \(lightDev.environment)\(lightDev.id)"
             cell.room.text = lightDev.room?.name
             cell.id = lightDev.id
+            cell.lightDev = lightDev
             cell.enviroment = lightDev.environment
             if (lightDev.status == DeviceLight.STATUS.ON) {
                 cell.mySwitch.isOn = true
@@ -92,6 +114,31 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.myTableView.reloadData()
+        if (actualScene == nil) {
+            myImageView.layer.cornerRadius = 25
+            myImageView.backgroundColor = UIColor.gray
+            myLabel.text = "Select a scene"
+        }
+        if (allLights.count == 0) {
+            lightButton.isEnabled = false
+        } else {
+            lightButton.isEnabled = true
+        }
+        if (allTemp.count == 0) {
+            temperatureButton.isEnabled = false
+            myStepper.isEnabled = false
+            
+        } else {
+            temperatureButton.isEnabled = true
+            myStepper.isEnabled = true
+        }
+        if (allShutters.count == 0) {
+            shutterButton.isEnabled = false
+        } else {
+            shutterButton.isEnabled = true
+        }
+
+        
     }
     
     

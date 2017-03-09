@@ -57,23 +57,18 @@ class OWNConnection {
                 data.removeAll()
                 result = try socket.read(into: &data)
                 response = String(data: data, encoding: String.Encoding.utf8)
-                print(response ?? "No Response Data")
+                //print(response ?? "No Response Data")
                 
                 var responses=response?.components(separatedBy: "##")
-                responses=responses?.filter({ $0 != ""})
+                responses=responses?.filter({ $0 != ""}) //togliamo il vuoto
                 for rr in responses! {
                     let rIesim=rr+"##"
-                    
-                    if((rIesim != ack) || (rIesim == nack)){
+                    if (rIesim != ack && rIesim != nack){
                         devices.append(parseStringLight(message: rIesim)!)
                     }
-                    
-                
                 }
-                
+            } while (!response!.contains(ack) && !response!.contains(nack))
 
-            } while((response != ack) || (response == nack))
-            
             socket.close()
             
             
@@ -112,13 +107,16 @@ class OWNConnection {
                 data.removeAll()
                 result = try socket.read(into: &data)
                 response = String(data: data, encoding: String.Encoding.utf8)
-               // print(response ?? "No Response Data")
-                if((response != ack) || (response == nack)){
-                    devices.append(parseStringAutomation(message: response!)!)
+                var responses=response?.components(separatedBy: "##")
+                responses=responses?.filter({ $0 != ""}) //togliamo il vuoto
+                for rr in responses! {
+                    let rIesim=rr+"##"
+                    if (rIesim != ack && rIesim != nack){
+                        devices.append(parseStringAutomation(message: rIesim)!)
+                    }
                 }
-                
-            } while((response != ack) || (response == nack))
-            
+            } while (!response!.contains(ack) && !response!.contains(nack))
+        
             socket.close()
             
         } catch {
@@ -159,7 +157,7 @@ class OWNConnection {
                 result = try socket.read(into: &data)
                 response = String(data: data, encoding: String.Encoding.utf8)
                // print(response ?? "No Response Data")
-                if((response != ack) || (response == nack)){
+                if((response != ack) && (response != nack)){
                     let message = response!.replacingOccurrences(of: "##", with: "") //togliamo i separatori
                     var fields=message.components(separatedBy: "*")
                     fields=fields.filter({ $0 != ""})
@@ -171,7 +169,7 @@ class OWNConnection {
                     }
                 }
                 
-            } while((response != ack) || (response == nack))
+            } while ((response != ack) && (response != nack))
             
        device=DeviceThermoregulation(id: id, actualTemperature: actualTemperature, settedTemperature: settedTemperature)
             socket.close()

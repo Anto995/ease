@@ -16,9 +16,14 @@ class Room {
     var lightInstalled = [DeviceLight]()
     var tempInstalled = [DeviceThermoregulation]()
     var shutterInstalled = [DeviceAutomation]()
+    var floor: String?
+    var backColor: UIColor?
     
-    init(name: String, identifier: Int) {
+    
+    init(name: String, identifier: Int, floor: String, color: UIColor) {
         self.name = name
+        self.floor = floor
+        self.backColor = color
         id = identifier
         switch identifier {
         case 1:
@@ -28,9 +33,9 @@ class Room {
         case 3:
             self.image = #imageLiteral(resourceName: "kitchen")
         case 4:
-            self.image = #imageLiteral(resourceName: "double room")
-        case 5:
             self.image = #imageLiteral(resourceName: "livingroom")
+        case 5:
+            self.image = #imageLiteral(resourceName: "double room")
         case 6:
             self.image = #imageLiteral(resourceName: "other")
         default:

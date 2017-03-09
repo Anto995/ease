@@ -11,6 +11,7 @@ import UIKit
 class LightTableViewCell: UITableViewCell {
     var id: String!
     var enviroment: String!
+    var lightDev: DeviceLight!
     @IBOutlet var myImageView: UIImageView!
     @IBOutlet var lightPoint: UILabel!
     @IBOutlet var room: UILabel!
@@ -33,8 +34,10 @@ class LightTableViewCell: UITableViewCell {
     @IBAction func switchOnOff(_ sender: UISwitch) {
         if mySwitch.isOn {
             con.sendCommandLights(status: DeviceLight.STATUS.ON, environment: self.enviroment, id: self.id)
+            lightDev.status = DeviceLight.STATUS.ON
         } else {
             con.sendCommandLights(status: DeviceLight.STATUS.OFF, environment: self.enviroment, id: self.id)
+            lightDev.status = DeviceLight.STATUS.OFF
         }
     }
     

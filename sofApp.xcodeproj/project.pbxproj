@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A916F0A21E70414300088DDC /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A916F0A11E70414300088DDC /* Socket.framework */; };
-		A916F0A41E70414E00088DDC /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A916F0A31E70414E00088DDC /* Socket.framework */; };
 		A916F0A91E7041CE00088DDC /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916F0A61E7041CE00088DDC /* Devices.swift */; };
 		A916F0AA1E7041CE00088DDC /* asdmain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916F0A71E7041CE00088DDC /* asdmain.swift */; };
-		A916F0AB1E7041CE00088DDC /* OWNConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916F0A81E7041CE00088DDC /* OWNConnection.swift */; };
 		A916F0B01E70443600088DDC /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916F0AD1E70443600088DDC /* Socket.swift */; };
 		A916F0B11E70443600088DDC /* SocketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916F0AE1E70443600088DDC /* SocketProtocols.swift */; };
 		A916F0B21E70443600088DDC /* SocketUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916F0AF1E70443600088DDC /* SocketUtils.swift */; };
@@ -21,9 +18,14 @@
 		A928D8691E6EADC2006C4C7F /* ScenarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928D8681E6EADC2006C4C7F /* ScenarioViewController.swift */; };
 		A951CCC01E6F34EC00B0A442 /* ScenaryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951CCBF1E6F34EC00B0A442 /* ScenaryDetailsViewController.swift */; };
 		A962A66E1E6F1786007D01DD /* DeviceSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A962A66D1E6F1786007D01DD /* DeviceSelectionViewController.swift */; };
+		A99A1CE31E715FD100544D58 /* OWNConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A1CE21E715FD100544D58 /* OWNConnection.swift */; };
 		A9B8BEEE1E6D8F2F00385D1B /* RoomsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8BEED1E6D8F2F00385D1B /* RoomsCollectionViewCell.swift */; };
 		A9B8BEF01E6D90B100385D1B /* NewRoomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8BEEF1E6D90B100385D1B /* NewRoomModalViewController.swift */; };
 		A9B8BEF21E6D932B00385D1B /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8BEF11E6D932B00385D1B /* RoomDetailsViewController.swift */; };
+		A9DACF671E70BEFC00D9ABA5 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A916F0A31E70414E00088DDC /* Socket.framework */; };
+		A9DACF691E70BEFC00D9ABA5 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A916F0A11E70414300088DDC /* Socket.framework */; };
+		A9DACF6B1E70BF1E00D9ABA5 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A916F0A31E70414E00088DDC /* Socket.framework */; };
+		A9DACF6C1E70BF1E00D9ABA5 /* Socket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A916F0A31E70414E00088DDC /* Socket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9E28A621E6D601200677F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E28A611E6D601200677F22 /* AppDelegate.swift */; };
 		A9E28A671E6D601200677F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E28A651E6D601200677F22 /* Main.storyboard */; };
 		A9E28A691E6D601200677F22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9E28A681E6D601200677F22 /* Assets.xcassets */; };
@@ -58,12 +60,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A9DACF6D1E70BF1E00D9ABA5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A9DACF6C1E70BF1E00D9ABA5 /* Socket.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A916F0A11E70414300088DDC /* Socket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Socket.framework; path = sofApp/SocketFramework/Debug/Socket.framework; sourceTree = "<group>"; };
 		A916F0A31E70414E00088DDC /* Socket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Socket.framework; path = sofApp/SocketFramework/DebugIphone/Socket.framework; sourceTree = "<group>"; };
 		A916F0A61E7041CE00088DDC /* Devices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Devices.swift; path = ../Devices.swift; sourceTree = "<group>"; };
 		A916F0A71E7041CE00088DDC /* asdmain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = asdmain.swift; path = ../asdmain.swift; sourceTree = "<group>"; };
-		A916F0A81E7041CE00088DDC /* OWNConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OWNConnection.swift; path = ../OWNConnection.swift; sourceTree = "<group>"; };
 		A916F0AC1E70443600088DDC /* Socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Socket.h; sourceTree = "<group>"; };
 		A916F0AD1E70443600088DDC /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 		A916F0AE1E70443600088DDC /* SocketProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketProtocols.swift; sourceTree = "<group>"; };
@@ -74,6 +89,7 @@
 		A928D8681E6EADC2006C4C7F /* ScenarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenarioViewController.swift; sourceTree = "<group>"; };
 		A951CCBF1E6F34EC00B0A442 /* ScenaryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenaryDetailsViewController.swift; sourceTree = "<group>"; };
 		A962A66D1E6F1786007D01DD /* DeviceSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSelectionViewController.swift; sourceTree = "<group>"; };
+		A99A1CE21E715FD100544D58 /* OWNConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWNConnection.swift; sourceTree = "<group>"; };
 		A9B8BEED1E6D8F2F00385D1B /* RoomsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9B8BEEF1E6D90B100385D1B /* NewRoomModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRoomModalViewController.swift; sourceTree = "<group>"; };
 		A9B8BEF11E6D932B00385D1B /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
@@ -105,8 +121,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A916F0A41E70414E00088DDC /* Socket.framework in Frameworks */,
-				A916F0A21E70414300088DDC /* Socket.framework in Frameworks */,
+				A9DACF6B1E70BF1E00D9ABA5 /* Socket.framework in Frameworks */,
+				A9DACF671E70BEFC00D9ABA5 /* Socket.framework in Frameworks */,
+				A9DACF691E70BEFC00D9ABA5 /* Socket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,11 +149,11 @@
 			children = (
 				A916F0AC1E70443600088DDC /* Socket.h */,
 				A916F0AD1E70443600088DDC /* Socket.swift */,
+				A99A1CE21E715FD100544D58 /* OWNConnection.swift */,
 				A916F0AE1E70443600088DDC /* SocketProtocols.swift */,
 				A916F0A61E7041CE00088DDC /* Devices.swift */,
 				A916F0AF1E70443600088DDC /* SocketUtils.swift */,
 				A916F0A71E7041CE00088DDC /* asdmain.swift */,
-				A916F0A81E7041CE00088DDC /* OWNConnection.swift */,
 			);
 			name = socket;
 			sourceTree = "<group>";
@@ -170,6 +187,7 @@
 				A916F0B31E70445A00088DDC /* socket */,
 				A9E28A611E6D601200677F22 /* AppDelegate.swift */,
 				A916F0B41E70494500088DDC /* DevicesViewController.swift */,
+				A9B8BEF11E6D932B00385D1B /* RoomDetailsViewController.swift */,
 				A9E28A651E6D601200677F22 /* Main.storyboard */,
 				A9E28A681E6D601200677F22 /* Assets.xcassets */,
 				A9E28A6A1E6D601200677F22 /* LaunchScreen.storyboard */,
@@ -186,7 +204,6 @@
 				A928D8681E6EADC2006C4C7F /* ScenarioViewController.swift */,
 				A9B8BEED1E6D8F2F00385D1B /* RoomsCollectionViewCell.swift */,
 				A9B8BEEF1E6D90B100385D1B /* NewRoomModalViewController.swift */,
-				A9B8BEF11E6D932B00385D1B /* RoomDetailsViewController.swift */,
 				A962A66D1E6F1786007D01DD /* DeviceSelectionViewController.swift */,
 				A951CCBF1E6F34EC00B0A442 /* ScenaryDetailsViewController.swift */,
 			);
@@ -230,6 +247,7 @@
 				A9E28A5A1E6D601200677F22 /* Sources */,
 				A9E28A5B1E6D601200677F22 /* Frameworks */,
 				A9E28A5C1E6D601200677F22 /* Resources */,
+				A9DACF6D1E70BF1E00D9ABA5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -360,7 +378,6 @@
 				A916F0B51E70494500088DDC /* DevicesViewController.swift in Sources */,
 				A9E28A9E1E6D634C00677F22 /* LightTableViewCell.swift in Sources */,
 				A9E8014D1E6EC18600D8F550 /* DeviceInRoomCell.swift in Sources */,
-				A916F0AB1E7041CE00088DDC /* OWNConnection.swift in Sources */,
 				A9E28AA41E6D737F00677F22 /* RoomsCollectionViewController.swift in Sources */,
 				A951CCC01E6F34EC00B0A442 /* ScenaryDetailsViewController.swift in Sources */,
 				A9E28AA01E6D65C900677F22 /* DefaultTableViewCell.swift in Sources */,
@@ -372,6 +389,7 @@
 				A916F0AA1E7041CE00088DDC /* asdmain.swift in Sources */,
 				A9F67E221E6DDBC100FC9FA6 /* ShutterTableViewCell.swift in Sources */,
 				A9B8BEF01E6D90B100385D1B /* NewRoomModalViewController.swift in Sources */,
+				A99A1CE31E715FD100544D58 /* OWNConnection.swift in Sources */,
 				A9E28A621E6D601200677F22 /* AppDelegate.swift in Sources */,
 				A9B8BEF21E6D932B00385D1B /* RoomDetailsViewController.swift in Sources */,
 				A9E28A901E6D60E600677F22 /* HomeViewController.swift in Sources */,

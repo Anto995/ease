@@ -10,6 +10,7 @@ import UIKit
 
 class TermometerTableViewCell: UITableViewCell {
     
+    var id: String!
     @IBOutlet var myImageView: UIImageView!
     @IBOutlet var termometer: UILabel!
     @IBOutlet var room: UILabel!
@@ -18,6 +19,7 @@ class TermometerTableViewCell: UITableViewCell {
     
     @IBAction func stepperAction(_ sender: UIStepper) {
         temperature.text = "\(myStepper.value)"
+        con.sendCommandTemperature(id: self.id, temperature: "0\(Int(myStepper.value))0")
     }
     
     override func awakeFromNib() {

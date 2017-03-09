@@ -29,7 +29,19 @@ class REQEUST{
     
 }
 
-class DeviceLight : CustomStringConvertible{
+class DeviceLight : CustomStringConvertible, Hashable, Equatable {
+    /// Returns a Boolean value indicating whether two values are equal.
+    ///
+    /// Equality is the inverse of inequality. For any values `a` and `b`,
+    /// `a == b` implies that `a != b` is `false`.
+    ///
+    /// - Parameters:
+    ///   - lhs: A value to compare.
+    ///   - rhs: Another value to compare.
+    public static func ==(lhs: DeviceLight, rhs: DeviceLight) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+
     enum STATUS: String{
         case ON="1"
         case OFF="0"
@@ -50,6 +62,11 @@ class DeviceLight : CustomStringConvertible{
     var type:WHO=WHO.Lights
     var room: Room?
     let image: UIImage = #imageLiteral(resourceName: "light")
+    var hashValue: Int {
+        get {
+            return Int(environment+id)!
+        }
+    }
     
     var description: String {
         return "type: \(type), environment: \(environment), id: \(id), status:\(status)\n"
@@ -64,7 +81,8 @@ class DeviceLight : CustomStringConvertible{
     
 }
 
-class DeviceAutomation : CustomStringConvertible{
+class DeviceAutomation : CustomStringConvertible, Hashable, Equatable {
+    
     enum STATUS: String{
         case UP="1"
         case DOWN="2"
@@ -73,6 +91,16 @@ class DeviceAutomation : CustomStringConvertible{
     var id: String
     var status:DeviceAutomation.STATUS
     var type:WHO=WHO.Automation
+    
+    var hashValue: Int {
+        get {
+            return Int(id)!
+        }
+    }
+    
+    static func == (id1: DeviceAutomation, id2: DeviceAutomation) -> Bool {
+        return id1.hashValue == id2.hashValue
+    }
     
     var description: String {
         return "type: \(type) id: \(id), status:\(status)\n"
@@ -86,13 +114,33 @@ class DeviceAutomation : CustomStringConvertible{
     
 }
 
-class DeviceThermoregulation : CustomStringConvertible{
+
+class DeviceThermoregulation : CustomStringConvertible, Hashable, Equatable {
+    
+    /// Returns a Boolean value indicating whether two values are equal.
+    ///
+    /// Equality is the inverse of inequality. For any values `a` and `b`,
+    /// `a == b` implies that `a != b` is `false`.
+    ///
+    /// - Parameters:
+    ///   - lhs: A value to compare.
+    ///   - rhs: Another value to compare.
+    public static func ==(lhs: DeviceThermoregulation, rhs: DeviceThermoregulation) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+
 
     var id: String
     var actualTemperature:String
     var settedTemperature:String
 
     var type:WHO=WHO.Thermoregulation
+    var hashValue: Int {
+        get {
+            return Int(id)!
+        }
+    }
+    
     
     var description: String {
         return "type: \(type) id: \(id), actualTemperature:\(actualTemperature)\n, settedTemperature:\(settedTemperature)\n"

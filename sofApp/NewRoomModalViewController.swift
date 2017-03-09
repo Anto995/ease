@@ -20,12 +20,15 @@ class NewRoomModalViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     @IBOutlet weak var roomSelectedImage: UIImageView!
     
-    @IBAction func donePressed(_ sender: UIButton) {
+    @IBAction func donePressed(_ sender: UIBarButtonItem) {
         
-        rooms.append(Room(name: roomDescr.text!, identifier: id!))
+        rooms.append(Room(name: roomDescr.text!, identifier: id!, floor: floorTextField.text!, color: colors[Int(arc4random_uniform(UInt32(colors.count)))] ))
         
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBOutlet weak var floorTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

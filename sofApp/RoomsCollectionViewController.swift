@@ -9,7 +9,6 @@
 import UIKit
 
 private let reuseIdentifier = "Cell"
-
 let sectionInsets = UIEdgeInsets(top: 20.0, left: 13.0, bottom: 50.0, right: 13.0)
 class RoomsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -45,6 +44,7 @@ class RoomsCollectionViewController: UICollectionViewController, UICollectionVie
                 let dstView = segue.destination as! RoomDetailsViewController
                 
                 dstView.room = rooms[selectedIndexPath.row]
+                
             }
             
             
@@ -83,6 +83,7 @@ class RoomsCollectionViewController: UICollectionViewController, UICollectionVie
         cell.layer.cornerRadius = 20
         cell.imageCell.image = room.image
         cell.roomDescr.text = room.name
+        cell.backgroundColor = room.backColor
         return cell
     }
 

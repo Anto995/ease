@@ -7,13 +7,20 @@
 //
 
 import UIKit
-
+let colors: [UIColor] = [UIColor.blue, UIColor.green, UIColor.lightGray]
 var favoriteLights =  [DeviceLight]()
+var favoriteShutters = [DeviceAutomation]()
+var favoriteTemp = [DeviceThermoregulation]()
 var allLights = [DeviceLight]()
+var allLights1 = Set<DeviceLight>()
+var allShutters2 = Set<DeviceAutomation>()
+var allTemp2 = Set<DeviceThermoregulation>()
+var allShutters = [DeviceAutomation]()
+var allTemp = [DeviceThermoregulation]()
 var scenes = [Scenary]()
 var rooms = [Room]()
 
-var con = OWNConnection(ip: "192.168.1.35", port: 20000)
+var con = OWNConnection(ip: "127.0.0.1", port: 20000)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
