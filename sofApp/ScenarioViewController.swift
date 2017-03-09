@@ -14,7 +14,9 @@ class ScenarioViewController: UIViewController, UITableViewDelegate, UITableView
     var scena: Scenary = Scenary()
     var imageSelection = [#imageLiteral(resourceName: "bathroom"), #imageLiteral(resourceName: "bedroom"), #imageLiteral(resourceName: "kitchen"), #imageLiteral(resourceName: "livingroom"), #imageLiteral(resourceName: "double room"), #imageLiteral(resourceName: "other")]
     
-    
+    override var prefersStatusBarHidden : Bool {
+        return true
+    }
     //var listaDevices = ["Luce1","Tappa1"] //supp che lo scenario posssiede già disp
     
     @IBOutlet weak var scenaryOutlet: UITextField!
@@ -37,20 +39,91 @@ class ScenarioViewController: UIViewController, UITableViewDelegate, UITableView
         self.devicesTableView.reloadData()
     }
    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        var rowCount = 0
+        if section == 0 {
+            if (scena.lightInstalled.count == 0) {
+                return 1
+            } else {
+                rowCount = scena.lightInstalled.count
+            }
+            
+        }
+        if section == 1 {
+            if (scena.shutterInstalled.count == 0) {
+                return 1
+            } else {
+                rowCount = scena.shutterInstalled.count
+            }
+        }
+        if section == 2 {
+            if (scena.tempInstalled.count == 0) {
+                return 1
+            } else {
+                rowCount = scena.tempInstalled.count
+            }
+        }
+        return rowCount
         
     }
     
    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      // se è una luce
-        let cell = tableView.dequeueReusableCell(withIdentifier: "lightCell", for: indexPath) as! LightTableViewCell
-        // Configure the cell...
-        
-        return cell
+        if indexPath.section == 0 {
+            if (scena.lightInstalled.count == 0) {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath) as! DefaultTableViewCell
+                cell.myLabel.text = "Add a light"
+                return cell
+            }
+            let lightDev = scena.lightInstalled[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "lightCell", for: indexPath) as! LightTableViewCell
+            cell.myImageView.image = #imageLiteral(resourceName: "light")
+            cell.lightPoint.text = "Light: \(lightDev.environment)\(lightDev.id)"
+            cell.lightDev = lightDev
+            cell.id = lightDev.id
+            cell.enviroment = lightDev.environment
+            cell.room.text = lightDev.room?.name
+            if (lightDev.status == DeviceLight.STATUS.ON) {
+                cell.mySwitch.isOn = true
+            } else {
+                cell.mySwitch.isOn = false
+            }
+            return cell
+        } else if indexPath.section == 1 {
+            if (scena.shutterInstalled.count == 0) {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath) as! DefaultTableViewCell
+                cell.myLabel.text = "Add a shutter"
+                return cell
+            }
+            let shutDev = scena.shutterInstalled[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "shutterCell", for: indexPath) as! ShutterTableViewCell
+            cell.myImageView.image = #imageLiteral(resourceName: "shutter")
+            cell.shutter.text = "Shutter: \(shutDev.id)"
+            cell.room.text = shutDev.room?.name
+            cell.id = shutDev.id
+            return cell
+        } else {
+            if (scena.tempInstalled.count == 0) {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath) as! DefaultTableViewCell
+                cell.myLabel.text = "Add a termo"
+                return cell
+            }
+            let tempDev = scena.tempInstalled[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "termometerCell", for: indexPath) as! TermometerTableViewCell
+            cell.myImageView.image = #imageLiteral(resourceName: "temp")
+            cell.termometer.text = "Termo: \(tempDev.id)"
+            
+            cell.id = tempDev.id
+            cell.myStepper.value = (Double(tempDev.actualTemperature))!/10
+            cell.temperature.text = "\(cell.myStepper.value)"
+            cell.room.text = tempDev.room?.name
+            return cell
+        }
     }
     
     @IBAction func startTimeTapped(_ sender: UITextField)
@@ -68,7 +141,10 @@ class ScenarioViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
-        
+        scena.name = scenaryOutlet.text
+        scena.image = selectedImage.image
+        scenes.append(scena)
+        dismiss(animated: true, completion: nil)
     }
     
     
@@ -97,6 +173,7 @@ class ScenarioViewController: UIViewController, UITableViewDelegate, UITableView
         dateFormatter.timeStyle = .short
         scenarioStartAt.text = dateFormatter.string(from: datePickerView.date)
         self.view.endEditing(true)
+        scena.startDate = datePickerView.date
         
         
     }
@@ -109,6 +186,7 @@ class ScenarioViewController: UIViewController, UITableViewDelegate, UITableView
         dateFormatter.timeStyle = .short
         scenarioEndAt.text = dateFormatter.string(from: datePickerView.date)
         self.view.endEditing(true)
+        scena.endDate = datePickerView.date
         
     }
     override func viewDidLoad() {

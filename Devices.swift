@@ -61,7 +61,7 @@ class DeviceLight : CustomStringConvertible, Hashable, Equatable {
     var status:DeviceLight.STATUS
     var type:WHO=WHO.Lights
     var room: Room?
-    let image: UIImage = #imageLiteral(resourceName: "light")
+    
     var hashValue: Int {
         get {
             return Int(environment+id)!
@@ -91,7 +91,7 @@ class DeviceAutomation : CustomStringConvertible, Hashable, Equatable {
     var id: String
     var status:DeviceAutomation.STATUS
     var type:WHO=WHO.Automation
-    
+    var room: Room?
     var hashValue: Int {
         get {
             return Int(id)!
@@ -129,7 +129,7 @@ class DeviceThermoregulation : CustomStringConvertible, Hashable, Equatable {
         return lhs.hashValue == rhs.hashValue
     }
 
-
+    var room: Room?
     var id: String
     var actualTemperature:String
     var settedTemperature:String

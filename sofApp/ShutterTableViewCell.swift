@@ -11,6 +11,7 @@ import UIKit
 
 class ShutterTableViewCell: UITableViewCell {
     
+    var id: String!
     @IBOutlet var myImageView: UIImageView!
     @IBOutlet var shutter: UILabel!
     @IBOutlet var room: UILabel!
@@ -19,11 +20,11 @@ class ShutterTableViewCell: UITableViewCell {
     @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
         switch (self.mySegmentedControl.selectedSegmentIndex) {
         case 0:
-            print(#function)
+            con.sendCommandAutomation(status: DeviceAutomation.STATUS.UP, id: self.id)
         case 1:
-            print(#function)
+            con.sendCommandAutomation(status: DeviceAutomation.STATUS.DOWN, id: self.id)
         case 2:
-            print(#function)
+            con.sendCommandAutomation(status: DeviceAutomation.STATUS.STOP, id: self.id)
         default:
             print(#function)
         }

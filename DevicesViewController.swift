@@ -44,6 +44,8 @@ class DevicesViewController: UIViewController, UITableViewDataSource, UITableVie
             let cell = tableView.dequeueReusableCell(withIdentifier: "shutterCell", for: indexPath) as! ShutterTableViewCell
             cell.myImageView.image = #imageLiteral(resourceName: "shutter")
             cell.shutter.text = "Shutter: \(shutDev.id)"
+            cell.id = shutDev.id
+            
             return cell
         } else {
             
@@ -110,12 +112,15 @@ class DevicesViewController: UIViewController, UITableViewDataSource, UITableVie
             if cell.accessoryType == UITableViewCellAccessoryType.checkmark {
                 if cell is LightTableViewCell {
                     room.lightInstalled.append(roomLights[i])
+                    roomLights[i].room = room
                 }
                 if cell is ShutterTableViewCell {
                     room.shutterInstalled.append(roomShutters[i-roomLights.count])
+                    roomShutters[i-roomLights.count].room = room
                 }
                 if cell is TermometerTableViewCell {
                     room.tempInstalled.append(roomTemp[i-roomLights.count-roomShutters.count])
+                    roomTemp[i-roomLights.count-roomShutters.count].room = room
                 }
                 
             }

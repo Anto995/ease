@@ -10,4 +10,7 @@ import UIKit
 
 class SceneCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var sceneImage: UIImageView!
+    @IBOutlet weak var sceneName: UILabel!
+    
 }

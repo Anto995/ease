@@ -31,8 +31,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func turnOffAllLights(_ sender: UIButton) {
+        
         con.sendCommandLights(status: DeviceLight.STATUS.OFF)
-        for item in allLights {
+        for item in allLights1 {
             item.status = DeviceLight.STATUS.OFF
         }
         myTableView.reloadData()
@@ -46,42 +47,41 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        
-        if (allLights.count == 0) {
-            lightButton.isEnabled = false
-        } else {
-            lightButton.isEnabled = true
-        }
-        if (allTemp.count == 0) {
-            temperatureButton.isEnabled = false
-            myStepper.isEnabled = false
-            
-        } else {
-            temperatureButton.isEnabled = true
-            myStepper.isEnabled = true
-        }
-        if (allShutters.count == 0) {
-            shutterButton.isEnabled = false
-        } else {
-            shutterButton.isEnabled = true
-        }
-        */
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (favoriteLights.count + favoriteTemp.count + favoriteShutters.count) == 0{
-            return 1
-        } else {
-          return favoriteLights.count + favoriteTemp.count + favoriteShutters.count
+        var rowCount = 0
+        if section == 0 {
+            if (favoriteLights.count == 0) {
+                return 1
+            } else {
+                rowCount = favoriteLights.count
+            }
+            
         }
+        if section == 1 {
+            if (favoriteShutters.count == 0) {
+                return 1
+            } else {
+                rowCount = favoriteShutters.count
+            }
+        }
+        if section == 2 {
+            if (favoriteTemp.count == 0) {
+                return 1
+            } else {
+                rowCount = favoriteTemp.count
+            }
+        }
+        return rowCount
         
         
     }
@@ -92,22 +92,45 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath) as! DefaultTableViewCell
             return cell
         }
-        let lightDev = favoriteLights[indexPath.row]
         
+        if indexPath.section == 0 {
+            
+            let lightDev = favoriteLights[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "lightCell", for: indexPath) as! LightTableViewCell
             cell.myImageView.image = #imageLiteral(resourceName: "light")
             cell.lightPoint.text = "Light: \(lightDev.environment)\(lightDev.id)"
-            cell.room.text = lightDev.room?.name
-            cell.id = lightDev.id
             cell.lightDev = lightDev
+            cell.id = lightDev.id
             cell.enviroment = lightDev.environment
+            cell.room.text = lightDev.room?.name
             if (lightDev.status == DeviceLight.STATUS.ON) {
                 cell.mySwitch.isOn = true
-        } else {
-            cell.mySwitch.isOn = false
-        }
+            } else {
+                cell.mySwitch.isOn = false
+            }
             return cell
-        
+        } else if indexPath.section == 1 {
+           
+            let shutDev = favoriteShutters[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "shutterCell", for: indexPath) as! ShutterTableViewCell
+            cell.myImageView.image = #imageLiteral(resourceName: "shutter")
+            cell.shutter.text = "Shutter: \(shutDev.id)"
+            cell.room.text = shutDev.room?.name
+            cell.id = shutDev.id
+            return cell
+        } else {
+            
+            let tempDev = favoriteTemp[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "termometerCell", for: indexPath) as! TermometerTableViewCell
+            cell.myImageView.image = #imageLiteral(resourceName: "temp")
+            cell.termometer.text = "Termo: \(tempDev.id)"
+            
+            cell.id = tempDev.id
+            cell.myStepper.value = (Double(tempDev.actualTemperature))!/10
+            cell.temperature.text = "\(cell.myStepper.value)"
+            cell.room.text = tempDev.room?.name
+            return cell
+        }
         
     }
     
@@ -124,25 +147,30 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             myImageView.backgroundColor = UIColor.gray
             myLabel.text = "Select a scene"
         }
-        if (allLights.count == 0) {
-            lightButton.isEnabled = false
-        } else {
-            lightButton.isEnabled = true
-        }
-        if (allTemp.count == 0) {
-            temperatureButton.isEnabled = false
-            myStepper.isEnabled = false
+        
+        for item in rooms {
+            if item.lightInstalled.count != 0 {
+                lightButton.isEnabled = true
+                break
+            }
             
-        } else {
-            temperatureButton.isEnabled = true
-            myStepper.isEnabled = true
         }
-        if (allShutters.count == 0) {
-            shutterButton.isEnabled = false
-        } else {
-            shutterButton.isEnabled = true
+        for item in rooms {
+            if item.shutterInstalled.count != 0 {
+                shutterButton.isEnabled = true
+                break
+            }
+            
         }
-
+        for item in rooms {
+            if item.tempInstalled.count != 0 {
+                temperatureButton.isEnabled = true
+                myStepper.isEnabled = true
+                temperature.isHidden = false
+                break
+            }
+            
+        }
         
     }
     

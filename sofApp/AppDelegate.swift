@@ -7,7 +7,7 @@
 //
 
 import UIKit
-let colors: [UIColor] = [UIColor.blue, UIColor.green, UIColor.lightGray]
+let colors: [UIColor] = [UIColor.blue, UIColor.red, UIColor.lightGray]
 var favoriteLights =  [DeviceLight]()
 var favoriteShutters = [DeviceAutomation]()
 var favoriteTemp = [DeviceThermoregulation]()

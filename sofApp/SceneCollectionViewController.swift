@@ -69,6 +69,9 @@ class SceneCollectionViewController: UICollectionViewController, UICollectionVie
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "idcell", for: indexPath) as! SceneCollectionViewCell
         cell.layer.cornerRadius = 20
+        cell.backgroundColor = colors[Int(arc4random_uniform(UInt32(scenes.count)))]
+        cell.sceneImage.image = scenes[indexPath.row].image
+        cell.sceneName.text = scenes[indexPath.row].name
         // Configure the cell
     
         return cell
@@ -121,4 +124,8 @@ class SceneCollectionViewController: UICollectionViewController, UICollectionVie
         return sectionInsets.left
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        collectionView?.reloadData()
+    }
 }

@@ -34,6 +34,8 @@ class NewRoomModalViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         self.roomSelector.dataSource = self
         self.roomSelector.delegate = self
+        pickerView(roomSelector, didSelectRow: 0, inComponent: 1)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -64,7 +66,7 @@ class NewRoomModalViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        roomSelected.text = roomType[row]
+        
         roomSelectedImage.image = imageSelection[row]
         id = row + 1
     }

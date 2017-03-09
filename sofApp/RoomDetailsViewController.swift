@@ -20,6 +20,7 @@ class RoomDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         if (room.tempInstalled.count == 0) {
             actualTemperature.text = "No termo"
         }
+        self.title = room.name
         // Do any additional setup after loading the view.
         
     }
@@ -105,6 +106,7 @@ class RoomDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             let cell = tableView.dequeueReusableCell(withIdentifier: "shutterCell", for: indexPath) as! ShutterTableViewCell
             cell.myImageView.image = #imageLiteral(resourceName: "shutter")
             cell.shutter.text = "Shutter: \(shutDev.id)"
+            cell.id = shutDev.id
             return cell
         } else {
             if (room.tempInstalled.count == 0) {
@@ -140,6 +142,7 @@ class RoomDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
         let more = UITableViewRowAction(style: .default, title: "Favorite") { action, index in
             favoriteLights.append(self.room.lightInstalled[indexPath.row])
         }
