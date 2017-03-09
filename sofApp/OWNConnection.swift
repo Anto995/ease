@@ -157,19 +157,26 @@ class OWNConnection {
                 result = try socket.read(into: &data)
                 response = String(data: data, encoding: String.Encoding.utf8)
                // print(response ?? "No Response Data")
-                if((response != ack) && (response != nack)){
-                    let message = response!.replacingOccurrences(of: "##", with: "") //togliamo i separatori
-                    var fields=message.components(separatedBy: "*")
+                
+                var responses=response?.components(separatedBy: "##")
+                responses=responses?.filter({ $0 != ""}) //togliamo il vuoto
+                for rr in responses! {
+                    let rIesim=rr
+                    
+                    var fields=rIesim.components(separatedBy: "*")
                     fields=fields.filter({ $0 != ""})
+                    if(fields.count>=3){
                     if(fields[2]=="0"){
                         actualTemperature=fields[3]
                     }
                     if(fields[2]=="12"){
                         settedTemperature=fields[3]
                     }
-                }
+                    }
                 
-            } while ((response != ack) && (response != nack))
+                }
+            } while (!response!.contains(ack) && !response!.contains(nack))
+            
             
        device=DeviceThermoregulation(id: id, actualTemperature: actualTemperature, settedTemperature: settedTemperature)
             socket.close()

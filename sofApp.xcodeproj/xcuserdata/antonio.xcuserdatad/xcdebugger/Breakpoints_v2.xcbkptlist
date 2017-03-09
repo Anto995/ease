@@ -51,5 +51,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sofApp/OWNConnection.swift"
+            timestampString = "510772334.792153"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "getRequestTemperature(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sofApp.OWNConnection.getRequestTemperature (id : Swift.String) -&gt; Swift.Optional&lt;sofApp.DeviceThermoregulation&gt;"
+                  moduleName = "sofApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonio/Documents/iOS%20Academy/sofApp/sofApp/OWNConnection.swift"
+                  timestampString = "510772427.926088"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "1636">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sofApp.OWNConnection.(getRequestTemperature (id : Swift.String) -&gt; Swift.Optional&lt;sofApp.DeviceThermoregulation&gt;).(closure #1)"
+                  moduleName = "sofApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonio/Documents/iOS%20Academy/sofApp/sofApp/OWNConnection.swift"
+                  timestampString = "510772427.927645"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
