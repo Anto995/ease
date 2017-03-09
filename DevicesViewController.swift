@@ -13,11 +13,13 @@ import UIKit
 
 class DevicesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var spin1: UIActivityIndicatorView!
+    
     var room: Room!
     var lightsNotInstalled: [DeviceLight]!
-    var roomLights: [DeviceLight]!
-    var roomShutters: [DeviceAutomation]!
-    var roomTemp: [DeviceThermoregulation]!
+    var roomLights = [DeviceLight]()
+    var roomShutters =  [DeviceAutomation]()
+    var roomTemp = [DeviceThermoregulation]()
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -49,9 +51,13 @@ class DevicesViewController: UIViewController, UITableViewDataSource, UITableVie
             let cell = tableView.dequeueReusableCell(withIdentifier: "termometerCell", for: indexPath) as! TermometerTableViewCell
             cell.myImageView.image = #imageLiteral(resourceName: "temp")
             cell.termometer.text = "Termo: \(tempDev.id)"
-            cell.temperature.text = "\(tempDev.actualTemperature)"
+            
+            
             cell.id = tempDev.id
+            cell.myStepper.value = (Double(tempDev.actualTemperature))!/10
+            cell.temperature.text = "\(cell.myStepper.value)"
             return cell
+            
         }
     }
     
@@ -78,32 +84,11 @@ class DevicesViewController: UIViewController, UITableViewDataSource, UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        allLights1.removeAll()
-        allLights1.formUnion(con.getRequestLights())
-        allTemp2.removeAll()
-        allTemp2.insert(con.getRequestTemperature(id: "1")!)
-        allTemp2.insert(con.getRequestTemperature(id: "2")!)
-        
-        allShutters2.removeAll()
-        allShutters2.formUnion(con.getRequestAutomation())
+        spin1.transform = CGAffineTransform(scaleX: 3, y: 3)
+        spin1.startAnimating()
         
         
-        
-        var temp =  Set<DeviceLight>()
-        var temp1 =  Set<DeviceAutomation>()
-        var temp2 =  Set<DeviceThermoregulation>()
-        
-        roomLights = Array<DeviceLight>()
-        
-        for room in rooms {
-            temp = temp.union(room.lightInstalled)
-            temp1 = temp1.union(room.shutterInstalled)
-            temp2 = temp2.union(room.tempInstalled)
-        }
-        
-        roomLights = Array(allLights1.subtracting(temp))
-        roomShutters = Array(allShutters2.subtracting(temp1))
-        roomTemp = Array(allTemp2.subtracting(temp2))
+        spin1.hidesWhenStopped = true
         
         
         
@@ -172,5 +157,39 @@ class DevicesViewController: UIViewController, UITableViewDataSource, UITableVie
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewDidAppear(_ animated: Bool) {
+        allLights1.removeAll()
+        allLights1.formUnion(con.getRequestLights())
+        allTemp2.removeAll()
+        allTemp2.insert(con.getRequestTemperature(id: "1")!)
+        allTemp2.insert(con.getRequestTemperature(id: "2")!)
+        
+        allShutters2.removeAll()
+        allShutters2.formUnion(con.getRequestAutomation())
+        
+        
+        
+        var temp =  Set<DeviceLight>()
+        var temp1 =  Set<DeviceAutomation>()
+        var temp2 =  Set<DeviceThermoregulation>()
+        
+        roomLights = Array<DeviceLight>()
+        
+        for room in rooms {
+            temp = temp.union(room.lightInstalled)
+            temp1 = temp1.union(room.shutterInstalled)
+            temp2 = temp2.union(room.tempInstalled)
+        }
+        
+        roomLights = Array(allLights1.subtracting(temp))
+        roomShutters = Array(allShutters2.subtracting(temp1))
+        roomTemp = Array(allTemp2.subtracting(temp2))
+        spin1.stopAnimating()
+        
+        myTableView.reloadData()
+    }
+    
+    
 
 }

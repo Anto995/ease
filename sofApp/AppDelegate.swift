@@ -20,7 +20,7 @@ var allTemp = [DeviceThermoregulation]()
 var scenes = [Scenary]()
 var rooms = [Room]()
 
-var con = OWNConnection(ip: "127.0.0.1", port: 20000)
+var con = OWNConnection(ip: "192.168.1.35", port: 20000)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

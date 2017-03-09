@@ -116,8 +116,10 @@ class RoomDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             let cell = tableView.dequeueReusableCell(withIdentifier: "termometerCell", for: indexPath) as! TermometerTableViewCell
             cell.myImageView.image = #imageLiteral(resourceName: "temp")
             cell.termometer.text = "Termo: \(tempDev.id)"
-            cell.temperature.text = "\(tempDev.actualTemperature)"
+            
             cell.id = tempDev.id
+            cell.myStepper.value = (Double(tempDev.actualTemperature))!/10
+            cell.temperature.text = "\(cell.myStepper.value)"
             return cell
         }
         
@@ -160,6 +162,7 @@ class RoomDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         // Pass the selected object to the new view controller.
         let dstView = segue.destination as! DevicesViewController
         dstView.room = room
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {

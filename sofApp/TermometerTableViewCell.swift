@@ -18,8 +18,10 @@ class TermometerTableViewCell: UITableViewCell {
     @IBOutlet var myStepper: UIStepper!
     
     @IBAction func stepperAction(_ sender: UIStepper) {
+        
         temperature.text = "\(myStepper.value)"
-        con.sendCommandTemperature(id: self.id, temperature: "0\(Int(myStepper.value))0")
+        con.sendCommandTemperature(id: self.id, temperature: "0\(Int((myStepper.value)*10))")
+        print("0\((myStepper.value)*10)")
     }
     
     override func awakeFromNib() {
